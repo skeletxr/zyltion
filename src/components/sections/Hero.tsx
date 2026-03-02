@@ -18,62 +18,32 @@ const Hero = () => {
 
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
           {/* Left Content */}
-          <div className="lg:col-span-6 flex flex-col justify-center relative z-[2] lg:w-[576px] lg:h-[425px] font-sans text-[12px]">
-            <motion.div
-              initial={{ opacity: 0, y: 10, filter: "blur(1px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="relative flex items-center gap-2 h-[34px] px-4 py-[6px] rounded-[17px] bg-white shadow-[0_8px_24px_rgba(173,173,173,0.08)] mb-6 w-fit box-border"
-            >
-              <svg
-                className="w-[14px] h-[14px] text-gray-700"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-6 flex flex-col justify-center relative z-[2] lg:w-[576px] lg:h-[425px] font-sans text-[12px]"
+          >
+            <div className="relative flex items-center gap-2 h-[34px] px-4 py-[6px] rounded-[17px] bg-white shadow-[0_8px_24px_rgba(173,173,173,0.08)] mb-6 w-fit box-border">
+              <svg className="w-[14px] h-[14px] text-gray-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="8" r="5" />
                 <path d="M3 21v-2a7 7 0 0 1 7-7h4a7 7 0 0 1 7 7v2" />
               </svg>
-              <span className="text-[12px] font-bold uppercase tracking-wider text-black font-sans leading-none">
-                Award-Winning Firm
-              </span>
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 15, filter: "blur(1px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="text-[70px] font-[300] leading-[70px] tracking-[-2.8px] font-serif text-black mb-6 block"
-            >
-              Business growth with
-              <br />
-              expert consultancy
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 15, filter: "blur(1px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="text-lg text-gray-700 mb-8 leading-relaxed max-w-md font-medium"
-            >
-              Achieve sustainable growth through expert insights, tailored
-              solutions, and trusted support.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 15, filter: "blur(1px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="flex flex-wrap items-center gap-4 mb-10"
-            >
-              <button className="relative flex items-center justify-center gap-2 px-8 py-5 rounded-2xl bg-[#0e3a27] text-white font-bold text-sm transition-all cursor-pointer overflow-hidden shadow-[0_0.6px_1.1px_-1.25px_rgba(61,61,61,0.72),0_2.3px_4.1px_-2.5px_rgba(61,61,61,0.64),0_10px_18px_-3.75px_rgba(61,61,61,0.25),0_0.7px_0.7px_-0.58px_rgba(22,51,32,0.35),0_1.8px_1.8px_-1.17px_rgba(22,51,32,0.34),0_3.6px_3.6px_-1.75px_rgba(22,51,32,0.33),0_6.9px_6.9px_-2.33px_rgba(22,51,32,0.3),0_13.6px_13.7px_-2.92px_rgba(22,51,32,0.26),0_30px_30px_-3.5px_rgba(22,51,32,0.15)] group">
+              <span className="text-[12px] font-bold uppercase tracking-wider text-black font-sans leading-none">Award-Winning Firm</span>
+            </div>
+            
+            <h1 className="text-[70px] font-[300] leading-[70px] tracking-[-2.8px] font-serif text-black mb-6 block">
+              Business growth with<br />expert consultancy
+            </h1>
+            
+            <p className="text-lg text-gray-700 mb-8 leading-relaxed max-w-md font-medium">
+              Achieve sustainable growth through expert insights, tailored solutions, and trusted support.
+            </p>
+            
+            <div className="flex flex-wrap items-center gap-4 mb-10">
+              <button 
+                className="relative flex items-center justify-center gap-2 px-8 py-5 rounded-2xl bg-[#0e3a27] text-white font-bold text-sm transition-all cursor-pointer overflow-hidden shadow-[0_0.6px_1.1px_-1.25px_rgba(61,61,61,0.72),0_2.3px_4.1px_-2.5px_rgba(61,61,61,0.64),0_10px_18px_-3.75px_rgba(61,61,61,0.25),0_0.7px_0.7px_-0.58px_rgba(22,51,32,0.35),0_1.8px_1.8px_-1.17px_rgba(22,51,32,0.34),0_3.6px_3.6px_-1.75px_rgba(22,51,32,0.33),0_6.9px_6.9px_-2.33px_rgba(22,51,32,0.3),0_13.6px_13.7px_-2.92px_rgba(22,51,32,0.26),0_30px_30px_-3.5px_rgba(22,51,32,0.15)] group"
+              >
                 Get Started
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </button>
@@ -81,7 +51,7 @@ const Hero = () => {
                 Our Services
                 <ArrowRight className="w-4 h-4" />
               </button>
-            </motion.div>
+            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 15, filter: "blur(1px)" }}
@@ -103,7 +73,7 @@ const Hero = () => {
                 Rated by loving Clients
               </span>
             </motion.div>
-          </div>
+          </motion.div>
 
           {/* Right Content - Images */}
           <div className="lg:col-span-6 flex flex-col items-end gap-10">
