@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "animation-designer": {
+      "source": "daffy0208/ai-dev-standards",
+      "sourceType": "github",
+      "computedHash": "8d67411378f8609415a2ea727013490c8432bfd941ae3f4a343b8bf4d874ec81"
+    },
+    "ui-animation": {
+      "source": "mblode/agent-skills",
+      "sourceType": "github",
+      "computedHash": "d03322a1be1a1b7189b6edd6d1615cc4e19767cad79bf42fb0a2e58425607d03"
+    }
+  }
+}
