@@ -24,11 +24,8 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-6 flex flex-col justify-center relative z-[2] lg:w-[576px] lg:h-[425px] font-sans text-[12px]"
           >
-            <div className="relative flex items-center gap-2 h-[34px] px-4 py-[6px] rounded-[17px] bg-white shadow-[0_8px_24px_rgba(173,173,173,0.08)] mb-6 w-fit box-border">
-              <svg className="w-[14px] h-[14px] text-gray-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="8" r="5" />
-                <path d="M3 21v-2a7 7 0 0 1 7-7h4a7 7 0 0 1 7 7v2" />
-              </svg>
+            <div className="relative flex items-center gap-2 h-[42px] px-6 py-[10px] rounded-[17px] bg-white shadow-[0_8px_24px_rgba(173,173,173,0.08)] mb-10 w-fit box-border">
+              <img src="/assets/verified-badge-svgrepo-com.svg" alt="Verified Badge" className="w-[24px] h-[24px] text-gray-700" />
               <span className="text-[12px] font-bold uppercase tracking-wider text-black font-sans leading-none">Award-Winning Firm</span>
             </div>
             
