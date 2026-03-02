@@ -14,16 +14,16 @@ import SmoothScroll from './components/layout/SmoothScroll';
 export default function App() {
   return (
     <Router>
-      <TopBar />
       <SmoothScroll>
         <div className="min-h-screen bg-[#fafafa] font-sans text-gray-900 relative">
+          <TopBar />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
+          <FloatingDock />
         </div>
       </SmoothScroll>
-      <FloatingDock />
     </Router>
   );
 }
