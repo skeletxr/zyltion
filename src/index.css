@@ -1,14 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&family=Great+Vibes&family=Crimson+Pro:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&family=Great+Vibes&family=Crimson+Pro:wght@300;400;500&display=swap");
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Crimson Pro", "Playfair Display", ui-serif, Georgia, serif;
   --font-script: "Great Vibes", cursive;
-  
+
   --color-brand-dark: #0f291e;
   --color-brand-light: #eef4e6;
   --color-brand-light-hover: #e2ebd6;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

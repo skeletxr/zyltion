@@ -9,18 +9,21 @@ import TopBar from './components/layout/TopBar';
 import FloatingDock from './components/layout/FloatingDock';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
+import SmoothScroll from './components/layout/SmoothScroll';
 
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-[#fafafa] font-sans text-gray-900 relative overflow-x-hidden">
-        <TopBar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
-        <FloatingDock />
-      </div>
+      <TopBar />
+      <SmoothScroll>
+        <div className="min-h-screen bg-[#fafafa] font-sans text-gray-900 relative">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </div>
+      </SmoothScroll>
+      <FloatingDock />
     </Router>
   );
 }

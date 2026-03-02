@@ -37,7 +37,7 @@ const Hero = () => {
               Achieve sustainable growth through expert insights, tailored solutions, and trusted support.
             </p>
             
-            <div className="flex flex-wrap items-center gap-4 mb-10">
+            <div className="flex flex-wrap items-center gap-4 mb-6">
               <button 
                 className="relative flex items-center justify-center gap-2 px-8 py-5 rounded-2xl bg-[#0e3a27] text-white font-bold text-sm transition-all cursor-pointer overflow-hidden shadow-[0_0.6px_1.1px_-1.25px_rgba(61,61,61,0.72),0_2.3px_4.1px_-2.5px_rgba(61,61,61,0.64),0_10px_18px_-3.75px_rgba(61,61,61,0.25),0_0.7px_0.7px_-0.58px_rgba(22,51,32,0.35),0_1.8px_1.8px_-1.17px_rgba(22,51,32,0.34),0_3.6px_3.6px_-1.75px_rgba(22,51,32,0.33),0_6.9px_6.9px_-2.33px_rgba(22,51,32,0.3),0_13.6px_13.7px_-2.92px_rgba(22,51,32,0.26),0_30px_30px_-3.5px_rgba(22,51,32,0.15)] group"
               >
@@ -73,13 +73,13 @@ const Hero = () => {
           </motion.div>
 
           {/* Right Content - Images */}
-          <div className="lg:col-span-6 flex flex-col items-end gap-10">
+          <div className="lg:col-span-6 flex flex-col items-end gap-4">
             <motion.div
               initial={{ opacity: 0, y: 20, filter: "blur(1px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.7, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.3 }}
-              className="relative flex gap-6 w-full lg:w-[576px] lg:h-[438.667px] bg-transparent rounded-[40px] p-6 lg:p-8 box-border flex-shrink-0"
+              className="relative flex gap-6 w-full aspect-[4/3] lg:aspect-auto lg:w-[640px] lg:h-[480px] bg-transparent rounded-[40px] p-4 lg:p-8 box-border flex-shrink-0"
             >
               <img
                 src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
@@ -99,7 +99,7 @@ const Hero = () => {
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.7, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.3 }}
-              className="flex items-center gap-4"
+              className="flex items-center justify-end gap-4 pt-6 border-t border-black/15 w-full lg:max-w-[640px]"
             >
               <div className="flex -space-x-2">
                 <img
