@@ -30,27 +30,27 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="w-full bg-[#f2f1eb] py-24 sm:py-32 relative">
+    <section className="w-full bg-[#f2f1eb] py-16 sm:py-20 relative">
       <div className="max-w-350 mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-20">
-          <h2 className="text-4xl sm:text-5xl font-serif text-gray-900 mb-6">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl font-serif text-gray-900 mb-4">
             Your Questions, Answered Clearly
           </h2>
-          <p className="text-gray-600 text-lg leading-relaxed">
+          <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
             Whether you're seeking strategic direction or improving business
             performance, here are answers to the most common questions clients
             ask.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
           {/* Left Column - Image & Quote */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative rounded-4xl overflow-hidden h-125 flex flex-col justify-center items-center p-10 text-center shadow-lg"
+            className="relative rounded-3xl overflow-hidden h-96 flex flex-col justify-center items-center p-8 text-center shadow-lg"
           >
             {/* Background Image */}
             <div
@@ -65,10 +65,10 @@ const FAQSection = () => {
 
             {/* Content */}
             <div className="relative z-20 flex flex-col items-center">
-              <span className="text-7xl font-serif text-white/80 leading-none mb-4">
-                “
+              <span className="text-5xl font-serif text-white/80 leading-none mb-3">
+                "
               </span>
-              <div className="text-3xl sm:text-4xl font-serif text-white leading-tight mb-10 max-w-md flex flex-wrap justify-center gap-2">
+              <div className="text-2xl sm:text-3xl font-serif text-white leading-tight mb-6 max-w-sm flex flex-wrap justify-center gap-1">
                 {[
                   "Our",
                   "main",
@@ -126,7 +126,7 @@ const FAQSection = () => {
           </motion.div>
 
           {/* Right Column - FAQs */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3">
             {faqs.map((faq, idx) => (
               <motion.div
                 key={idx}
@@ -138,13 +138,13 @@ const FAQSection = () => {
               >
                 <button
                   onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-                  className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
+                  className="w-full px-5 py-4 flex items-center justify-between text-left focus:outline-none"
                 >
-                  <span className="font-medium text-gray-900 pr-8">
+                  <span className="font-medium text-gray-900 pr-6 text-sm sm:text-base">
                     {faq.q}
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 text-gray-500 transition-transform duration-300 shrink-0 ${openIdx === idx ? "rotate-180" : ""}`}
+                    className={`w-4 h-4 text-gray-500 transition-transform duration-300 shrink-0 ${openIdx === idx ? "rotate-180" : ""}`}
                   />
                 </button>
 
@@ -157,7 +157,7 @@ const FAQSection = () => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                  <div className="px-5 pb-4 text-gray-600 leading-relaxed text-sm sm:text-base">
                     {faq.a}
                   </div>
                 </motion.div>
