@@ -66,7 +66,7 @@ const ProvenProcessSection = () => {
 
   return (
     <section className="w-full bg-[#f2f1eb] py-24 sm:py-32 relative">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-350 mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={containerRef}
           className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 relative"

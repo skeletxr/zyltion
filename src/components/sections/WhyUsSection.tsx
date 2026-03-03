@@ -108,8 +108,8 @@ const WhyUsSection = () => {
       style={{ height: "90vh" }}
     >
       {/* Background decorative elements */}
-      <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-[#f4f7f0] to-transparent rounded-full blur-3xl opacity-50 -translate-y-1/2 -translate-x-1/4 pointer-events-none"></div>
-      <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-gradient-to-tl from-[#f4f7f0] to-transparent rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
+      <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-white to-transparent rounded-full blur-3xl opacity-50 -translate-y-1/2 -translate-x-1/4 pointer-events-none"></div>
+      <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-gradient-to-tl from-white to-transparent rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col h-full justify-center gap-6">
         <div className="text-center max-w-4xl mx-auto">
@@ -128,7 +128,7 @@ const WhyUsSection = () => {
           ref={containerRef}
         >
           {/* Blur Masks */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-48 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-24 sm:w4-848 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none"></div>
           <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-48 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none"></div>
 
           <div className="overflow-hidden py-4">
