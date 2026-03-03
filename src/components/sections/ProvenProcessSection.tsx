@@ -117,41 +117,97 @@ const ProvenProcessSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="bg-[#f8f9f5] rounded-[32px] p-10 sm:p-16 text-center shadow-sm border border-white/50"
+                className="bg-[#f6f4ed] rounded-2xl p-10 sm:p-16 text-center shadow-sm border-2 border-white relative overflow-hidden group"
               >
-                <div className="relative inline-block mb-8">
-                  <span className="text-6xl sm:text-7xl font-serif text-gray-900 relative z-10">
-                    {step.number}
-                  </span>
-                  {/* Decorative scribble/circle behind number */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-8 bg-gray-200/50 rounded-full blur-sm -z-0"></div>
+                {/* Irregular Organic Background Pattern */}
+                <div className="absolute inset-0 pointer-events-none opacity-[0.08] group-hover:opacity-[0.12] transition-opacity duration-700">
                   <svg
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-16 text-gray-300 -z-0"
-                    viewBox="0 0 100 50"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-full h-full"
+                    viewBox="0 0 400 400"
+                    preserveAspectRatio="none"
                   >
-                    <path
-                      d="M10 25 C 10 10, 90 10, 90 25 C 90 40, 10 40, 10 25"
+                    <motion.path
+                      d="M-50,200 Q100,50 250,200 T550,200"
                       stroke="currentColor"
+                      fill="none"
                       strokeWidth="2"
-                      strokeLinecap="round"
+                      animate={{
+                        d: [
+                          "M-50,200 Q100,50 250,200 T550,200",
+                          "M-50,200 Q100,350 250,200 T550,200",
+                          "M-50,200 Q100,50 250,200 T550,200",
+                        ],
+                      }}
+                      transition={{
+                        duration: 10,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
                     />
-                    <path
-                      d="M15 28 C 15 15, 85 15, 85 28 C 85 41, 15 41, 15 28"
+                    <motion.path
+                      d="M-50,250 Q150,100 300,250 T650,250"
                       stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
+                      fill="none"
+                      strokeWidth="2.5"
+                      animate={{
+                        d: [
+                          "M-50,250 Q150,100 300,250 T650,250",
+                          "M-50,250 Q150,400 300,250 T650,250",
+                          "M-50,250 Q150,100 300,250 T650,250",
+                        ],
+                      }}
+                      transition={{
+                        duration: 15,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: 2,
+                      }}
                     />
                   </svg>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 text-lg leading-relaxed max-w-xl mx-auto">
-                  {step.description}
-                </p>
+                <motion.div
+                  className="absolute -right-12 -top-12 w-48 h-48 bg-brand-dark/10 rounded-full blur-3xl"
+                  animate={{
+                    scale: [1, 1.2, 1],
+                    x: [0, 20, 0],
+                    y: [0, -20, 0],
+                  }}
+                  transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+                <motion.div
+                  className="absolute -left-12 -bottom-12 w-48 h-48 bg-brand-dark/10 rounded-full blur-3xl"
+                  animate={{
+                    scale: [1, 1.3, 1],
+                    x: [0, -30, 0],
+                    y: [0, 30, 0],
+                  }}
+                  transition={{
+                    duration: 12,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1,
+                  }}
+                />
+
+                <div className="relative z-10">
+                  <div className="relative inline-block mb-8">
+                    <span className="text-6xl sm:text-7xl font-serif text-gray-900 relative z-10">
+                      {step.number}
+                    </span>
+                  </div>
+
+                  <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 text-lg leading-relaxed max-w-xl mx-auto">
+                    {step.description}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
