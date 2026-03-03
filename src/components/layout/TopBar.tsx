@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Instagram, Facebook } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 import { motion } from "motion/react";
 
 const TopBar = () => (
@@ -8,7 +8,7 @@ const TopBar = () => (
     initial={{ opacity: 0, y: -20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.7, ease: "easeOut" }}
-    className="font-sans text-[12px] w-full max-w-[1280px] mx-auto px-4 sm:px-10 py-4 sm:py-5 flex justify-between items-center bg-transparent text-black h-auto sm:h-[84px] box-border z-50 relative mt-2 sm:mt-4"
+    className="font-sans text-[12px] w-full max-w-7xl mx-auto px-4 sm:px-10 py-4 sm:py-5 flex justify-between items-center bg-transparent text-black h-auto sm:h-[84px] box-border z-50 relative mt-2 sm:mt-4"
   >
     <Link to="/">
       <img
@@ -27,10 +27,10 @@ const TopBar = () => (
       <div className="flex items-center">
         <div className="w-px h-6 bg-black/15"></div>
         <a
-          href="#"
+          href="mailto:contact@altoscript.com"
           className="p-3 text-black hover:opacity-70 transition-opacity"
         >
-          <Instagram className="h-6 w-6" />
+          <Mail className="h-6 w-6" />
         </a>
         <div className="w-px h-6 bg-black/15"></div>
         <a
@@ -55,7 +55,7 @@ const TopBar = () => (
           href="#"
           className="p-3 text-black hover:opacity-70 transition-opacity"
         >
-          <Facebook className="h-6 w-6" />
+          <Linkedin className="h-6 w-6" />
         </a>
         <div className="w-px h-6 bg-black/15"></div>
       </div>

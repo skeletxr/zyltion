@@ -12,7 +12,7 @@ const ComparisonSection = () => {
   ];
 
   return (
-    <section className="w-full min-h-[115vh] bg-white py-16 sm:py-20 flex items-center justify-center relative overflow-hidden">
+    <section className="w-full min-h-fit sm:min-h-[115vh] bg-white py-16 sm:py-20 flex items-center justify-center relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-gradient-to-b from-[#f4f7f0] to-transparent rounded-full blur-3xl opacity-50 pointer-events-none"></div>
 
@@ -31,13 +31,13 @@ const ComparisonSection = () => {
           <div className="w-full border border-gray-200 rounded-2xl overflow-hidden shadow-md">
             {/* Table Header */}
             <div className="grid grid-cols-[2fr_1.5fr_1.5fr] bg-[#f2f1eb] border-b border-gray-200">
-              <div className="p-5 sm:p-6 font-medium text-gray-900 border-r border-gray-200 flex items-center text-base sm:text-lg">
+              <div className="p-3 sm:p-5 lg:p-6 font-medium text-gray-900 border-r border-gray-200 flex items-center text-sm sm:text-base lg:text-lg">
                 Benefits
               </div>
-              <div className="p-5 sm:p-6 font-medium text-gray-900 border-r border-gray-200 flex items-center justify-center text-center text-base sm:text-lg leading-tight">
+              <div className="p-3 sm:p-5 lg:p-6 font-medium text-gray-900 border-r border-gray-200 flex items-center justify-center text-center text-sm sm:text-base lg:text-lg leading-tight">
                 Browsing The Internet
               </div>
-              <div className="p-5 sm:p-6 font-medium text-white bg-[var(--color-brand-dark)] flex items-center justify-center text-center text-base sm:text-lg leading-tight">
+              <div className="p-3 sm:p-5 lg:p-6 font-medium text-white bg-[var(--color-brand-dark)] flex items-center justify-center text-center text-sm sm:text-base lg:text-lg leading-tight">
                 Expert Consulting
               </div>
             </div>
@@ -49,13 +49,13 @@ const ComparisonSection = () => {
                   key={idx}
                   className={`grid grid-cols-[2fr_1.5fr_1.5fr] ${idx !== benefits.length - 1 ? "border-b border-gray-200" : ""}`}
                 >
-                  <div className="p-4 sm:p-5 text-gray-800 border-r border-gray-200 flex items-center text-base sm:text-lg">
+                  <div className="p-3 sm:p-4 lg:p-5 text-gray-800 border-r border-gray-200 flex items-center text-sm sm:text-base">
                     {benefit}
                   </div>
-                  <div className="p-4 sm:p-5 border-r border-gray-200 flex items-center justify-center">
+                  <div className="p-3 sm:p-4 lg:p-5 border-r border-gray-200 flex items-center justify-center">
                     <span className="text-gray-400 text-xl">—</span>
                   </div>
-                  <div className="p-4 sm:p-5 flex items-center justify-center">
+                  <div className="p-3 sm:p-4 lg:p-5 flex items-center justify-center">
                     <Check
                       className="w-6 h-6 text-[var(--color-brand-dark)]"
                       strokeWidth={2.5}

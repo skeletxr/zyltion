@@ -105,7 +105,7 @@ const WhyUsSection = () => {
   return (
     <section
       className="w-full bg-white py-8 sm:py-10 relative overflow-hidden flex flex-col"
-      style={{ height: "90vh" }}
+      style={{ minHeight: "90vh" }}
     >
       {/* Background decorative elements */}
       <div className="absolute top-1/2 left-0 w-150 h-150 bg-gradient-to-tr from-white to-transparent rounded-full blur-3xl opacity-50 -translate-y-1/2 -translate-x-1/4 pointer-events-none"></div>
@@ -169,7 +169,7 @@ const WhyUsSection = () => {
         </div>
 
         {/* Stats/Badges Row */}
-        <div className="flex flex-nowrap justify-center items-center gap-x-6 text-sm font-medium text-gray-700 w-full mx-auto relative">
+        <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-3 sm:gap-x-6 text-sm font-medium text-gray-700 w-full mx-auto relative">
           <div className="absolute top-1/2 left-0 right-0 h-px bg-gray-200 -z-10"></div>
 
           <div className="flex items-center gap-2 bg-white px-4 py-2">

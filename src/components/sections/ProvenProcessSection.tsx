@@ -117,7 +117,7 @@ const ProvenProcessSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="bg-[#f6f4ed] rounded-2xl p-10 sm:p-16 text-center shadow-sm border-2 border-white relative overflow-hidden group"
+                className="bg-[#f6f4ed] rounded-2xl p-6 sm:p-10 lg:p-16 text-center shadow-sm border-2 border-white relative overflow-hidden group"
               >
                 {/* Irregular Organic Background Pattern */}
                 <div className="absolute inset-0 pointer-events-none opacity-[0.08] group-hover:opacity-[0.12] transition-opacity duration-700">

@@ -29,7 +29,7 @@ const TagsSection = () => {
 
   return (
     <div className="w-full bg-[#f2f1eb] py-6 overflow-hidden relative">
-      <div className="w-[80%] mx-auto relative overflow-hidden">
+      <div className="w-[95%] sm:w-[80%] mx-auto relative overflow-hidden">
         {/* Fade masks for the edges */}
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#f2f1eb] to-transparent z-10"></div>
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#f2f1eb] to-transparent z-10"></div>

@@ -73,7 +73,7 @@ const ServicesSection = () => {
   return (
     <section
       id="services"
-      className="w-full bg-[#f2f1eb] sm:pt-32 sm:pb-16 relative overflow-hidden"
+      className="w-full bg-[#f2f1eb] pt-16 sm:pt-32 sm:pb-16 relative overflow-hidden"
     >
       {/* Abstract background elements */}
       <div className="absolute top-[-20%] right-[-10%] w-125 h-125 bg-white/20 rounded-full blur-[100px] pointer-events-none"></div>
