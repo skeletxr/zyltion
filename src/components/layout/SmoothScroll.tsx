@@ -1,4 +1,10 @@
-import React, { useRef, useState, useEffect, useLayoutEffect, useCallback } from "react";
+import React, {
+  useRef,
+  useState,
+  useEffect,
+  useLayoutEffect,
+  useCallback,
+} from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 interface SmoothScrollProps {
@@ -22,19 +28,19 @@ const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
     if (contentRef.current) {
       resizeObserver.observe(contentRef.current);
     }
-    
+
     return () => resizeObserver.disconnect();
   }, []);
 
   const { scrollY } = useScroll();
-  
+
   // Create a spring-based value based on raw scrollY
   // Higher stiffness/damping = more inertial and "heavier" (smoother)
   const smoothY = useSpring(scrollY, {
     stiffness: 100, // lower = more lag/smoothness
-    damping: 30,   // lower = more bounce
-    mass: 1,      // higher = more inertia
-    restDelta: 0.001
+    damping: 30, // lower = more bounce
+    mass: 1, // higher = more inertia
+    restDelta: 0.001,
   });
 
   const transform = useTransform(smoothY, (value) => `translateY(-${value}px)`);
@@ -44,7 +50,14 @@ const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
       <div style={{ height: contentHeight }} />
       <motion.div
         ref={contentRef}
-        style={{ transform, position: 'fixed', top: 0, left: 0, right: 0 }}
+        style={{
+          transform,
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          overflowX: "hidden",
+        }}
         className="w-full h-auto will-change-transform"
       >
         {children}

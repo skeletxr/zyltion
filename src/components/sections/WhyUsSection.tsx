@@ -11,7 +11,7 @@ const WhyUsSection = () => {
   const [activeIdx, setActiveIdx] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
-  const xMotion = useMotionValue(0);
+  const xMotion = useMotionValue(-99999);
   // currentSlot tracks which slot in displayCards is centered — lives in a ref so it
   // never triggers a re-render and the interval closure always reads the latest value.
   const currentSlot = useRef(4);
@@ -111,7 +111,7 @@ const WhyUsSection = () => {
       <div className="absolute top-1/2 left-0 w-150 h-150 bg-gradient-to-tr from-white to-transparent rounded-full blur-3xl opacity-50 -translate-y-1/2 -translate-x-1/4 pointer-events-none"></div>
       <div className="absolute top-1/2 right-0 w-150 h-150 bg-gradient-to-tl from-white to-transparent rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
 
-      <div className="max-w-350 mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col h-full justify-center gap-6">
+      <div className="w-full max-w-350 mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col flex-1 justify-center gap-6 overflow-hidden">
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-serif text-gray-900 mb-6">
             Why Even Us ?
@@ -124,14 +124,14 @@ const WhyUsSection = () => {
 
         {/* Carousel Container */}
         <div
-          className="relative w-full max-w-6xl mx-auto flex items-center"
+          className="relative w-full mx-auto flex items-center overflow-hidden"
           ref={containerRef}
         >
           {/* Blur Masks */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 sm:w4-848 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-48 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 lg:w-48 bg-linear-to-r from-white to-transparent z-20 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 lg:w-48 bg-linear-to-l from-white to-transparent z-20 pointer-events-none"></div>
 
-          <div className="overflow-hidden py-4">
+          <div className="w-full overflow-hidden py-4">
             <motion.div style={{ x: xMotion }} className="flex gap-6 w-fit">
               {displayCards.map((card, idx) => {
                 const isActive = idx % cards.length === activeIdx;

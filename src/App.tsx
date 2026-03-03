@@ -15,7 +15,7 @@ export default function App() {
   return (
     <Router>
       <SmoothScroll>
-        <div className="min-h-screen bg-[#fafafa] font-sans text-gray-900 relative">
+        <div className="min-h-screen overflow-x-hidden bg-[#fafafa] font-sans text-gray-900 relative">
           <TopBar />
           <Routes>
             <Route path="/" element={<HomePage />} />
