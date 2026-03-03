@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import { Target, Banknote, Hammer, LineChart } from "lucide-react";
+import { Target, Banknote, Hammer, LineChart, ArrowRight } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
@@ -46,59 +46,150 @@ const ServicesSection = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.12,
+        delayChildren: 0.15,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, filter: "blur(10px)", y: 30 },
+    visible: {
+      opacity: 1,
+      filter: "blur(0px)",
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <section
       id="services"
-      className="w-full bg-[#f2f1eb] sm:pt-32 sm:pb-16 "
+      className="w-full bg-[#f2f1eb] sm:pt-32 sm:pb-16 relative overflow-hidden"
     >
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-24">
-          <h2 className="text-4xl sm:text-5xl font-serif text-gray-900 mb-6">
+      {/* Abstract background elements */}
+      <div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-white/20 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-[#0f291e]/5 rounded-full blur-[80px] pointer-events-none"></div>
+
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-14 sm:mb-20"
+        >
+          <motion.div
+            initial={{ opacity: 0, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, filter: "blur(0px)" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="inline-block mb-3"
+          >
+            <span className="text-xs font-bold uppercase tracking-widest text-[#0f291e]/60">
+              Our Expertise
+            </span>
+          </motion.div>
+
+          <h2 className="text-4xl sm:text-5xl font-serif text-gray-900 mb-3 font-light">
             What We Even Do
           </h2>
-          <p className="text-gray-600 text-lg">
-            Explore our range of services to discover the perfect solution
-            tailored to your project's unique needs.
+          <p className="text-gray-600 text-base leading-relaxed max-w-2xl mx-auto">
+            Explore our comprehensive range of consulting services designed to
+            transform your business and unlock sustainable growth.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        {/* Services Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-7"
+        >
           {services.map((service, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="bg-[#fafafa] rounded-[32px] p-8 sm:p-10 shadow-sm hover:shadow-md transition-shadow"
+              variants={itemVariants}
+              className="group relative"
             >
-              <div className="w-14 h-14 rounded-2xl bg-[#eef4e6] flex items-center justify-center mb-8">
-                <service.icon
-                  className="w-7 h-7 text-[#0f291e]"
-                  strokeWidth={1.5}
-                />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 mb-10 leading-relaxed min-h-[80px]">
-                {service.description}
-              </p>
-              <div className="grid grid-cols-2 gap-4 h-[200px] sm:h-[240px]">
-                <img
-                  src={service.images[0]}
-                  alt=""
-                  className="w-full h-full object-cover rounded-2xl"
-                />
-                <img
-                  src={service.images[1]}
-                  alt=""
-                  className="w-full h-full object-cover rounded-2xl"
-                />
+              {/* Card Background with glassmorphism */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-white/20 rounded-[20px] backdrop-blur-xl border border-white/60 opacity-100 group-hover:opacity-0 transition-opacity duration-500"></div>
+
+              <div className="relative bg-white/30 backdrop-blur-2xl rounded-[20px] p-5 sm:p-7 overflow-hidden border border-white/40 shadow-[0_8px_32px_rgba(31,38,135,0.1)] hover:shadow-[0_8px_32px_rgba(31,38,135,0.2)] transition-all duration-500">
+                {/* Decorative gradient blob */}
+                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#0f291e]/5 to-transparent rounded-full blur-3xl -z-10 group-hover:scale-150 group-hover:from-[#0f291e]/10 transition-all duration-500"></div>
+
+                {/* Icon Container */}
+                <motion.div
+                  className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#eef4e6] to-[#d4e8c1] flex items-center justify-center mb-6 group-hover:shadow-lg transition-shadow duration-300"
+                  whileHover={{ scale: 1.05, rotate: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <service.icon
+                    className="w-7 h-7 text-[#0f291e]"
+                    strokeWidth={1.5}
+                  />
+                </motion.div>
+
+                {/* Title */}
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 font-serif">
+                  {service.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-600 mb-6 leading-relaxed min-h-[70px] text-sm">
+                  {service.description}
+                </p>
+
+                {/* Images Grid with enhanced styling */}
+                <div className="grid grid-cols-2 gap-2 h-[140px] sm:h-[180px] mb-4">
+                  <motion.div
+                    className="relative rounded-2xl overflow-hidden group/img shadow-md hover:shadow-lg transition-shadow duration-300"
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    <img
+                      src={service.images[0]}
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/10 transition-colors duration-300"></div>
+                  </motion.div>
+                  <motion.div
+                    className="relative rounded-2xl overflow-hidden group/img shadow-md hover:shadow-lg transition-shadow duration-300"
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    <img
+                      src={service.images[1]}
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/10 transition-colors duration-300"></div>
+                  </motion.div>
+                </div>
+
+                {/* Action Link */}
+                <motion.button
+                  className="flex items-center gap-2 text-[#0f291e] font-semibold text-sm group-hover:gap-3 transition-all opacity-0 group-hover:opacity-100"
+                  whileHover={{ x: 4 }}
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4" />
+                </motion.button>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
