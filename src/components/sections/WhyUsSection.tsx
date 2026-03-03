@@ -108,10 +108,10 @@ const WhyUsSection = () => {
       style={{ height: "90vh" }}
     >
       {/* Background decorative elements */}
-      <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-white to-transparent rounded-full blur-3xl opacity-50 -translate-y-1/2 -translate-x-1/4 pointer-events-none"></div>
-      <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-gradient-to-tl from-white to-transparent rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
+      <div className="absolute top-1/2 left-0 w-150 h-150 bg-gradient-to-tr from-white to-transparent rounded-full blur-3xl opacity-50 -translate-y-1/2 -translate-x-1/4 pointer-events-none"></div>
+      <div className="absolute top-1/2 right-0 w-150 h-150 bg-gradient-to-tl from-white to-transparent rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col h-full justify-center gap-6">
+      <div className="max-w-350 mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col h-full justify-center gap-6">
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-serif text-gray-900 mb-6">
             Why Even Us ?
@@ -138,7 +138,7 @@ const WhyUsSection = () => {
                 return (
                   <div
                     key={idx}
-                    className={`w-[320px] bg-[#f8f9f5] rounded-3xl p-2 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05),0_4px_20px_rgba(0,0,0,0.05)] border border-white flex-shrink-0 transition-all duration-500 ${isActive ? "opacity-100 scale-100" : "opacity-40 scale-95"}`}
+                    className={`w-[320px] bg-[#f8f9f5] rounded-3xl p-2 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05),0_4px_20px_rgba(0,0,0,0.05)] border border-white shrink-0 transition-all duration-500 ${isActive ? "opacity-100 scale-100" : "opacity-40 scale-95"}`}
                   >
                     <div className="bg-[#f2f1eb] rounded-[20px] p-6 h-full flex flex-col border border-gray-200/50 shadow-[inset_0_2px_10px_rgba(0,0,0,0.02)]">
                       <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6">

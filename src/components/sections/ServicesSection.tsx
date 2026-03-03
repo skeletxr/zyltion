@@ -76,10 +76,10 @@ const ServicesSection = () => {
       className="w-full bg-[#f2f1eb] sm:pt-32 sm:pb-16 relative overflow-hidden"
     >
       {/* Abstract background elements */}
-      <div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-white/20 rounded-full blur-[100px] pointer-events-none"></div>
-      <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-[#0f291e]/5 rounded-full blur-[80px] pointer-events-none"></div>
+      <div className="absolute top-[-20%] right-[-10%] w-125 h-125 bg-white/20 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute bottom-[-10%] left-[-5%] w-100 h-100 bg-[#0f291e]/5 rounded-full blur-[80px] pointer-events-none"></div>
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-350 mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -124,7 +124,7 @@ const ServicesSection = () => {
               className="group relative"
             >
               {/* Card Background with glassmorphism */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-white/20 rounded-[20px] backdrop-blur-xl border border-white/60 opacity-100 group-hover:opacity-0 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-linear-to-br from-white/40 to-white/20 rounded-[20px] backdrop-blur-xl border border-white/60 opacity-100 group-hover:opacity-0 transition-opacity duration-500"></div>
 
               <div className="relative bg-white/30 backdrop-blur-2xl rounded-[20px] p-5 sm:p-7 overflow-hidden border border-white/40 shadow-[0_8px_32px_rgba(31,38,135,0.1)] hover:shadow-[0_8px_32px_rgba(31,38,135,0.2)] transition-all duration-500">
                 {/* Decorative gradient blob */}
@@ -132,7 +132,7 @@ const ServicesSection = () => {
 
                 {/* Icon Container */}
                 <motion.div
-                  className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#eef4e6] to-[#d4e8c1] flex items-center justify-center mb-6 group-hover:shadow-lg transition-shadow duration-300"
+                  className="w-14 h-14 rounded-2xl bg-linear-to-br from-brand-light to-[#d4e8c1] flex items-center justify-center mb-6 group-hover:shadow-lg transition-shadow duration-300"
                   whileHover={{ scale: 1.05, rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
@@ -148,12 +148,12 @@ const ServicesSection = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 mb-6 leading-relaxed min-h-[70px] text-sm">
+                <p className="text-gray-600 mb-6 leading-relaxed min-h-17.5 text-sm">
                   {service.description}
                 </p>
 
                 {/* Images Grid with enhanced styling */}
-                <div className="grid grid-cols-2 gap-2 h-[140px] sm:h-[180px] mb-4">
+                <div className="grid grid-cols-2 gap-2 h-35 sm:h-45 mb-4">
                   <motion.div
                     className="relative rounded-2xl overflow-hidden group/img shadow-md hover:shadow-lg transition-shadow duration-300"
                     whileHover={{ scale: 1.02 }}

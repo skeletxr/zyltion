@@ -21,7 +21,7 @@ const ContactSection = () => {
               Contact Us
               <ArrowUpRight className="w-4 h-4" />
             </button>
-            <button className="flex items-center gap-2 bg-[#eef4e6] text-[#0f291e] px-6 py-4 rounded-2xl font-bold text-xs hover:bg-[#e2ead9] transition-all">
+            <button className="flex items-center gap-2 bg-brand-light text-[#0f291e] px-6 py-4 rounded-2xl border border-gray-200 font-bold text-xs hover:bg-[#e2ead9] transition-all">
               Our Services
               <ArrowRight className="w-4 h-4" />
             </button>

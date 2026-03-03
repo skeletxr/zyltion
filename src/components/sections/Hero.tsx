@@ -34,12 +34,12 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="w-full max-w-[1536px] mx-auto min-h-[776px] px-[50px] pt-[20px] pb-[100px] bg-[#fafafa] relative z-[2] overflow-hidden flex justify-center items-center box-border transition-all"
+      className="w-full max-w-384 mx-auto min-h-194 px-12.5 pt-5 pb-25 bg-[#fafafa] relative z-2 overflow-hidden flex justify-center items-center box-border transition-all"
     >
-      <div className="relative overflow-hidden max-w-[1436px] w-full min-h-[600px] flex items-center box-border z-[4] transition-all p-8 lg:p-20 rounded-[36px]">
+      <div className="relative overflow-hidden max-w-359 w-full min-h-150 flex items-center box-border z-4 transition-all p-8 lg:p-20 rounded-[36px]">
         {/* Card Background Layers */}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#ecebe4]/50 to-[#ecebe4]/25"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-1/2 backdrop-blur-2xl -z-10 [mask-image:linear-gradient(to_bottom,transparent,black)] pointer-events-none"></div>
+        <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#ecebe4]/50 to-[#ecebe4]/25"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-1/2 backdrop-blur-2xl -z-10 mask-[linear-gradient(to_bottom,transparent,black)] pointer-events-none"></div>
 
         {/* White glow effect on the left */}
         <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[120%] bg-white/40 rounded-full blur-[120px] pointer-events-none"></div>
@@ -50,7 +50,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-6 flex flex-col justify-center relative z-[2] lg:w-[576px] lg:h-[425px] font-sans text-[12px]"
+            className="lg:col-span-6 flex flex-col justify-center relative z-2 lg:w-xl lg:h-106.25 font-sans text-[12px]"
           >
             <motion.div
               variants={containerVariants}
@@ -62,12 +62,12 @@ const Hero = () => {
               {/* Badge */}
               <motion.div
                 variants={itemVariants}
-                className="relative flex items-center gap-2 h-[42px] px-6 py-[10px] rounded-[17px] bg-white shadow-[0_8px_24px_rgba(173,173,173,0.08)] w-fit box-border"
+                className="relative flex items-center gap-2 h-10.5 px-6 py-2.5 rounded-[17px] bg-white shadow-[0_8px_24px_rgba(173,173,173,0.08)] w-fit box-border"
               >
                 <img
                   src="/assets/verified-badge-svgrepo-com.svg"
                   alt="Verified Badge"
-                  className="w-[24px] h-[24px] text-gray-700"
+                  className="w-6 h-6 text-gray-700"
                 />
                 <span className="text-[12px] font-bold uppercase tracking-wider text-black font-sans leading-none">
                   Award-Winning Firm
@@ -77,7 +77,7 @@ const Hero = () => {
               {/* Heading */}
               <motion.h1
                 variants={itemVariants}
-                className="text-[70px] font-[300] leading-[70px] tracking-[-2.8px] font-serif text-black block"
+                className="text-[70px] font-light leading-17.5 tracking-[-2.8px] font-serif text-black block"
               >
                 Business growth with
                 <br />
@@ -102,7 +102,7 @@ const Hero = () => {
                   Get Started
                   <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </button>
-                <button className="flex items-center gap-2 bg-[#eef4e6] text-[#0f291e] px-8 py-5 rounded-2xl font-bold text-sm hover:bg-[#e2ead9] transition-all">
+                <button className="flex items-center gap-2 bg-brand-light text-[#0f291e] px-8 py-5 rounded-2xl border border-gray-200 font-bold text-sm hover:bg-[#e2ead9] transition-all">
                   Our Services
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -111,7 +111,7 @@ const Hero = () => {
               {/* Ratings */}
               <motion.div
                 variants={itemVariants}
-                className="flex items-center gap-4 pt-6 border-t border-black/15 w-full max-w-[400px]"
+                className="flex items-center gap-4 pt-6 border-t border-black/15 w-full max-w-100"
               >
                 <div className="flex gap-1">
                   {[1, 2, 3, 4, 5].map((star) => (
@@ -136,19 +136,19 @@ const Hero = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
-              className="relative flex gap-6 w-full aspect-[4/3] lg:aspect-auto lg:w-[640px] lg:h-[480px] bg-transparent rounded-[40px] p-4 lg:p-8 box-border flex-shrink-0"
+              className="relative flex gap-6 w-full aspect-4/3 lg:aspect-auto lg:w-160 lg:h-120 bg-transparent rounded-[40px] p-4 lg:p-8 box-border shrink-0"
             >
               <motion.img
                 variants={itemVariants}
                 src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Expert Consultant"
-                className="w-1/2 h-full object-cover rounded-[24px] shadow-sm"
+                className="w-1/2 h-full object-cover rounded-3xl shadow-sm"
               />
               <motion.img
                 variants={itemVariants}
                 src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Abstract 3D Design"
-                className="w-1/2 h-full object-cover rounded-[24px] shadow-sm"
+                className="w-1/2 h-full object-cover rounded-3xl shadow-sm"
               />
             </motion.div>
 
@@ -158,7 +158,7 @@ const Hero = () => {
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.7, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.3 }}
-              className="flex items-center justify-end gap-4 pt-6 border-t border-black/15 w-full lg:max-w-[640px]"
+              className="flex items-center justify-end gap-4 pt-6 border-t border-black/15 w-full lg:max-w-160"
             >
               <div className="flex -space-x-2">
                 <img
