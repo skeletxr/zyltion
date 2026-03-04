@@ -28,13 +28,9 @@ const TagsSection = () => {
   ];
 
   return (
-    <div className="w-full bg-[#f2f1eb] py-6 overflow-hidden relative">
-      <div className="w-[95%] sm:w-[80%] mx-auto relative overflow-hidden">
-        {/* Fade masks for the edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#f2f1eb] to-transparent z-10"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#f2f1eb] to-transparent z-10"></div>
-
-        <div className="flex flex-col gap-4">
+    <div className="w-full bg-[#f2f1eb] py-10 sm:py-16 relative z-10">
+      <div className="w-full sm:w-[90%] mx-auto relative flex flex-col justify-center min-h-[140px] [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div className="flex flex-col gap-5">
           {/* First Row */}
           <motion.div
             animate={{ x: [0, -1000] }}
@@ -44,10 +40,10 @@ const TagsSection = () => {
             {[...tags, ...tags].map((tag, idx) => (
               <div
                 key={`row1-${idx}`}
-                className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-3 rounded-full border border-gray-200/50 text-gray-700 font-medium text-xs"
+                className="flex flex-row items-center justify-center gap-2 bg-white/60 backdrop-blur-sm px-5 py-3 rounded-full border border-gray-200/50 text-gray-700 font-medium text-sm leading-none h-11"
               >
-                <tag.icon className="w-4 h-4 text-gray-500" />
-                {tag.text}
+                <tag.icon className="w-4 h-4 text-gray-500 shrink-0" />
+                <span className="translate-y-[1px]">{tag.text}</span>
               </div>
             ))}
           </motion.div>
@@ -61,10 +57,10 @@ const TagsSection = () => {
             {[...tags.reverse(), ...tags].map((tag, idx) => (
               <div
                 key={`row2-${idx}`}
-                className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-3 rounded-full border border-gray-200/50 text-gray-700 font-medium text-xs"
+                className="flex flex-row items-center justify-center gap-2 bg-white/60 backdrop-blur-sm px-5 py-3 rounded-full border border-gray-200/50 text-gray-700 font-medium text-sm leading-none h-11"
               >
-                <tag.icon className="w-4 h-4 text-gray-500" />
-                {tag.text}
+                <tag.icon className="w-4 h-4 text-gray-500 shrink-0" />
+                <span className="translate-y-[1px]">{tag.text}</span>
               </div>
             ))}
           </motion.div>

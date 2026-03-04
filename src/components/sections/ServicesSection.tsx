@@ -51,21 +51,22 @@ const ServicesSection = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.12,
-        delayChildren: 0.15,
+        staggerChildren: 0.2, // increased stagger for smoothness
+        delayChildren: 0.1,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, filter: "blur(10px)", y: 30 },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
-      filter: "blur(0px)",
       y: 0,
       transition: {
-        duration: 0.8,
-        ease: "easeOut",
+        type: "spring",
+        stiffness: 40,
+        damping: 15,
+        mass: 1,
       },
     },
   };
@@ -73,7 +74,7 @@ const ServicesSection = () => {
   return (
     <section
       id="services"
-      className="w-full bg-[#f2f1eb] pt-16 sm:pt-32 sm:pb-16 relative overflow-hidden"
+      className="w-full bg-[#f2f1eb] pt-12 sm:pt-20 pb-0 sm:pb-0 relative overflow-x-clip overflow-y-visible z-20"
     >
       {/* Abstract background elements */}
       <div className="absolute top-[-20%] right-[-10%] w-125 h-125 bg-white/20 rounded-full blur-[100px] pointer-events-none"></div>

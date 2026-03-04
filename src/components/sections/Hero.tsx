@@ -114,7 +114,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="w-full max-w-384 mx-auto min-h-auto sm:min-h-194 px-3 sm:px-6 lg:px-12.5 pt-3 sm:pt-5 pb-16 sm:pb-25 bg-[#fafafa] relative z-2 overflow-hidden flex justify-center items-center box-border transition-all"
+      className="w-full max-w-384 mx-auto min-h-auto sm:min-h-194 px-3 sm:px-6 lg:px-12.5 pt-3 sm:pt-5 pb-8 sm:pb-12 bg-[#fafafa] relative z-2 overflow-hidden flex justify-center items-center box-border transition-all"
     >
       <div className="relative overflow-hidden max-w-359 w-full min-h-auto lg:min-h-150 flex items-center box-border z-4 transition-all p-6 sm:p-8 lg:p-20 rounded-[28px] lg:rounded-[36px]">
         {/* Card Background Layers */}
@@ -375,6 +375,7 @@ const Hero = () => {
                   <motion.div
                     initial={{ opacity: 0, x: 0, y: 0, scale: 1 }}
                     animate={cursorControls}
+                    style={{ opacity: 0 }}
                     className="absolute top-3 left-12 z-50 pointer-events-none filter drop-shadow-lg"
                   >
                     <MousePointer2 className="w-6 h-6 text-[#0f291e] fill-white" />

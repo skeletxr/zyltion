@@ -4,8 +4,11 @@ import { ArrowUpRight, ArrowRight } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="w-full bg-[#f2f1eb] pb-24 pt-12">
-      <div className="max-w-[1400px] mx-auto px-4 pt-4 sm:px-6 lg:px-8">
+    <section
+      id="contact"
+      className="w-full bg-[#f2f1eb] pb-24 pt-0 relative z-10"
+    >
+      <div className="max-w-[1400px] mx-auto px-4 pt-0 sm:pt-0 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

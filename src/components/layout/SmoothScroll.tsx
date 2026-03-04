@@ -14,12 +14,15 @@ interface SmoothScrollProps {
 const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
   const contentRef = useRef<HTMLDivElement>(null);
   const [contentHeight, setContentHeight] = useState(0);
+  const [isReady, setIsReady] = useState(false);
 
   // Use ResizeObserver to update height when content changes
   useLayoutEffect(() => {
     const updateHeight = () => {
       if (contentRef.current) {
-        setContentHeight(contentRef.current.getBoundingClientRect().height);
+        const h = contentRef.current.getBoundingClientRect().height;
+        setContentHeight(h);
+        if (h > 0) setIsReady(true);
       }
     };
 
@@ -57,6 +60,7 @@ const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
           left: 0,
           right: 0,
           overflowX: "hidden",
+          visibility: isReady ? "visible" : "hidden",
         }}
         className="w-full h-auto will-change-transform"
       >
