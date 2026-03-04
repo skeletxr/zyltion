@@ -161,7 +161,7 @@ const Hero = () => {
               >
                 Business growth with
                 <br />
-                expert automation & dev
+                expert automation & development
               </motion.h1>
 
               {/* Description */}
@@ -210,7 +210,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Right Content - Images */}
-          <div className="lg:col-span-6 flex flex-col items-end gap-4 min-w-0">
+          <div className="lg:col-span-6 flex flex-col items-center gap-4 min-w-0">
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -225,7 +225,7 @@ const Hero = () => {
               {/* Main Workflow/App UI Card */}
               <div
                 ref={constraintsRef}
-                className="relative w-full max-w-full sm:max-w-[560px] lg:max-w-full bg-white/90 backdrop-blur-xl rounded-4xl border border-gray-200 shadow-[0_20px_40px_rgba(0,0,0,0.04)] p-6 sm:p-8 flex flex-col gap-6 transform-gpu lg:translate-x-4 lg:-translate-y-4"
+                className="relative w-full max-w-full sm:max-w-[560px] lg:max-w-full bg-white/90 backdrop-blur-xl rounded-4xl border border-gray-200 shadow-[0_20px_40px_rgba(0,0,0,0.04)] p-6 sm:p-8 flex flex-col gap-6 transform-gpu"
               >
                 {/* Header */}
                 <div className="flex justify-between items-center mb-2 pointer-events-none">
@@ -414,7 +414,7 @@ const Hero = () => {
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.7, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.3 }}
-              className="flex items-center justify-center lg:justify-end gap-4 pt-6 border-t border-black/15 w-full lg:max-w-160"
+              className="flex items-center justify-center lg:justify-end gap-4 pt-6 border-t border-black/15 w-full"
             >
               <span className="text-sm font-bold text-gray-900">
                 Join{" "}
