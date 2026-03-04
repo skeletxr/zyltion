@@ -124,7 +124,7 @@ const Hero = () => {
         {/* White glow effect on the left */}
         <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[120%] bg-white/40 rounded-full blur-[120px] pointer-events-none"></div>
 
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full min-h-auto lg:min-h-120">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 items-center w-full min-h-auto lg:min-h-120">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -150,7 +150,7 @@ const Hero = () => {
                   className="w-6 h-6 text-gray-700"
                 />
                 <span className="text-[12px] font-bold uppercase tracking-wider text-black font-sans leading-none">
-                  Award-Winning Firm
+                  Effortless Engingeering
                 </span>
               </motion.div>
 
@@ -216,7 +216,7 @@ const Hero = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
-              className="relative w-full aspect-4/3 sm:aspect-auto sm:w-full lg:w-160 lg:h-120 flex items-center justify-center lg:justify-end shrink-0"
+              className="relative w-full aspect-4/3 sm:aspect-auto sm:w-full lg:w-170 lg:h-120 flex items-center justify-center lg:justify-end shrink-0"
             >
               {/* Abstract light background blobs to match site aesthetic */}
               <div className="absolute top-10 right-10 w-64 h-64 bg-[#e2ead9]/80 rounded-full blur-[70px] pointer-events-none"></div>
@@ -225,7 +225,7 @@ const Hero = () => {
               {/* Main Workflow/App UI Card */}
               <div
                 ref={constraintsRef}
-                className="relative w-full max-w-120 bg-white/90 backdrop-blur-xl rounded-4xl border border-gray-200 shadow-[0_20px_40px_rgba(0,0,0,0.04)] p-6 sm:p-8 flex flex-col gap-6 transform-gpu lg:translate-x-4 lg:-translate-y-4"
+                className="relative w-full max-w-140 bg-white/90 backdrop-blur-xl rounded-4xl border border-gray-200 shadow-[0_20px_40px_rgba(0,0,0,0.04)] p-6 sm:p-8 flex flex-col gap-6 transform-gpu lg:translate-x-4 lg:-translate-y-4"
               >
                 {/* Header */}
                 <div className="flex justify-between items-center mb-2 pointer-events-none">

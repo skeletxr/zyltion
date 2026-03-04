@@ -8,13 +8,13 @@ const TopBar = () => (
     initial={{ opacity: 0, y: -20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.7, ease: "easeOut" }}
-    className="font-sans text-[12px] w-full max-w-7xl mx-auto px-4 sm:px-10 py-4 sm:py-5 flex justify-between items-center bg-transparent text-black h-auto sm:h-[84px] box-border z-50 relative mt-2 sm:mt-4"
+    className="font-sans text-[12px] w-full max-w-7xl mx-auto px-4 sm:px-10 py-3 sm:py-4 flex justify-between items-center bg-transparent text-black h-auto sm:h-[72px] box-border z-50 relative mt-2 sm:mt-4"
   >
     <Link to="/">
       <img
-        src="/AltoScripLabs-logo.png"
-        alt="AltoScript Logo"
-        className="h-10 sm:h-20 w-auto object-contain "
+        src="/Zyltion-logo.png"
+        alt="Zyltion Logo"
+        className="h-8 sm:h-16 w-auto object-contain "
       />
     </Link>
     <div className="flex items-center gap-6">
@@ -27,7 +27,7 @@ const TopBar = () => (
       <div className="flex items-center">
         <div className="w-px h-6 bg-black/15"></div>
         <a
-          href="mailto:contact@altoscript.com"
+          href="mailto:contact@zyltion.com"
           className="p-3 text-black hover:opacity-70 transition-opacity"
         >
           <Mail className="h-6 w-6" />

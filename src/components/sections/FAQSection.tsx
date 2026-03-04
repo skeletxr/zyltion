@@ -119,7 +119,7 @@ const FAQSection = () => {
                   className="w-12 h-12 rounded-full object-cover border-2 border-white/20"
                 />
                 <span className="text-white/90 font-medium">
-                  Co-founder of AltoScript
+                  Co-founder of Zyltion
                 </span>
               </motion.div>
             </div>

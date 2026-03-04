@@ -16,20 +16,22 @@ const FooterSection = () => {
       <div className="w-full max-w-350 mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex items-center gap-6">
           <a
-            href="mailto:altoscript@gmail.com"
+            href="mailto:zyltion@gmail.com"
             className="text-gray-900 font-medium underline underline-offset-4 hover:text-gray-600 transition-colors"
           >
-            altoscript@gmail.com
+            zyltion@gmail.com
           </a>
           <div className="grow h-px bg-gray-300"></div>
         </div>
       </div>
 
-      {/* Huge Center Text */}
-      <div className="grow flex items-center justify-center relative z-10">
-        <h1 className="text-[18vw] sm:text-[15vw] leading-none font-serif text-gray-900 tracking-tight select-none">
-          AltoScript
-        </h1>
+      {/* Huge Center Logo */}
+      <div className="grow flex items-center justify-center relative z-10 px-4">
+        <img
+          src="/Zyltion-logo.png"
+          alt="Zyltion Logo"
+          className="h-40 sm:h-64 w-auto object-contain max-w-full"
+        />
       </div>
 
       {/* Bottom Content */}
@@ -57,7 +59,7 @@ const FooterSection = () => {
 
         {/* Copyright */}
         <div className="flex items-center justify-center gap-4 text-gray-600 font-medium text-sm sm:text-base">
-          <span>© 2026 AltoScript</span>
+          <span>© 2026 Zyltion</span>
           <div className="w-12 sm:w-16 h-px bg-gray-300"></div>
           <span>All Rights Reserved</span>
         </div>
