@@ -124,13 +124,13 @@ const Hero = () => {
         {/* White glow effect on the left */}
         <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[120%] bg-white/40 rounded-full blur-[120px] pointer-events-none"></div>
 
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 items-center w-full min-h-auto lg:min-h-120">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center w-full min-h-auto lg:min-h-120">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-6 flex flex-col justify-center relative z-2 w-full font-sans text-[12px] pt-6 pb-4 lg:py-0"
+            className="lg:col-span-6 flex flex-col justify-center relative z-2 w-full min-w-0 font-sans text-[12px] pt-6 pb-4 lg:py-0"
           >
             <motion.div
               variants={containerVariants}
@@ -157,7 +157,7 @@ const Hero = () => {
               {/* Heading */}
               <motion.h1
                 variants={itemVariants}
-                className="text-[38px] sm:text-[52px] lg:text-[70px] font-light leading-tight lg:leading-17.5 tracking-[-0.5px] sm:tracking-[-1.5px] lg:tracking-[-2.8px] font-serif text-black block"
+                className="text-[38px] sm:text-[48px] lg:text-[56px] xl:text-[68px] font-light leading-tight lg:leading-[1.1] tracking-[-0.5px] sm:tracking-[-1.5px] lg:tracking-[-2px] font-serif text-black block"
               >
                 Business growth with
                 <br />
@@ -210,13 +210,13 @@ const Hero = () => {
           </motion.div>
 
           {/* Right Content - Images */}
-          <div className="lg:col-span-6 flex flex-col items-end gap-4">
+          <div className="lg:col-span-6 flex flex-col items-end gap-4 min-w-0">
             <motion.div
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
-              className="relative w-full aspect-4/3 sm:aspect-auto sm:w-full lg:w-170 lg:h-120 flex items-center justify-center lg:justify-end shrink-0"
+              className="relative w-full aspect-4/3 sm:aspect-auto sm:w-full lg:w-full lg:h-120 flex items-center justify-center lg:justify-end shrink-0"
             >
               {/* Abstract light background blobs to match site aesthetic */}
               <div className="absolute top-10 right-10 w-64 h-64 bg-[#e2ead9]/80 rounded-full blur-[70px] pointer-events-none"></div>
@@ -225,7 +225,7 @@ const Hero = () => {
               {/* Main Workflow/App UI Card */}
               <div
                 ref={constraintsRef}
-                className="relative w-full max-w-140 bg-white/90 backdrop-blur-xl rounded-4xl border border-gray-200 shadow-[0_20px_40px_rgba(0,0,0,0.04)] p-6 sm:p-8 flex flex-col gap-6 transform-gpu lg:translate-x-4 lg:-translate-y-4"
+                className="relative w-full max-w-full sm:max-w-[560px] lg:max-w-full bg-white/90 backdrop-blur-xl rounded-4xl border border-gray-200 shadow-[0_20px_40px_rgba(0,0,0,0.04)] p-6 sm:p-8 flex flex-col gap-6 transform-gpu lg:translate-x-4 lg:-translate-y-4"
               >
                 {/* Header */}
                 <div className="flex justify-between items-center mb-2 pointer-events-none">
