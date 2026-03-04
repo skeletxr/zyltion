@@ -8,13 +8,13 @@ const ContactSection = () => {
       id="contact"
       className="w-full bg-[#f2f1eb] pb-24 pt-0 relative z-10"
     >
-      <div className="max-w-[1400px] mx-auto px-4 pt-0 sm:pt-0 sm:px-6 lg:px-8">
+      <div className="max-w-350 mx-auto px-4 pt-0 sm:pt-0 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-[#f7f6f5] rounded-[16px] p-7 sm:p-14 text-center max-w-4xl mx-auto shadow-sm border border-white"
+          className="bg-[#f7f6f5] rounded-2xl p-7 sm:p-14 text-center max-w-4xl mx-auto shadow-sm border border-white"
         >
           <h2 className="text-3xl sm:text-5xl font-serif text-gray-900 mb-5 sm:mb-6 tracking-tight">
             Reach Out for Consultancy Inquiries
