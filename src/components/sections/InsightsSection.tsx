@@ -1,29 +1,56 @@
 import React from "react";
 import { motion } from "motion/react";
-import { ArrowUpRight, ArrowRight, CheckCircle2, Cloud } from "lucide-react";
+import { ArrowUpRight, ArrowRight, CheckCircle2 } from "lucide-react";
 
 const InsightsSection = () => {
-  const insights = [
+  const projects = [
     {
-      title: "Why Good Architecture is Business",
+      title: "Lead Picker",
       description:
-        "Good architecture goes beyond code—it builds trust, strengthens branding, and drives growth. Discover how architecture can turn into a powerful business...",
+        "Grabs new sales leads in milliseconds and routes them directly into your CRM — zero manual work required.",
+      tag: "Automation",
       image:
         "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
     },
     {
-      title: "The Rise of Scalable Systems",
+      title: "TapShopper",
       description:
-        "Scalable platforms are transforming how businesses build. Learn how scalable systems save time, reduce costs, and fuel innovation.",
+        "A massive, automated online store system that handles inventory, orders, and fulfilment at scale.",
+      tag: "Custom System",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
     },
     {
-      title: "Future of Cloud Computing",
+      title: "Auto-Filer",
       description:
-        "Cloud infrastructure is evolving rapidly. Explore the latest trends and how they can optimize your business operations and reduce overhead.",
+        "Moves data to state portals automatically — what used to take hours of manual filing now takes seconds.",
+      tag: "Automation",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      title: "Fokal App",
+      description:
+        "Modern, intuitive software to control and program commercial lighting hardware from a single dashboard.",
+      tag: "Web App",
+      image:
+        "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      title: "GhostScraper",
+      description:
+        "Gathers live market data across the web without getting blocked — giving businesses a real-time competitive edge.",
+      tag: "Data Tool",
       image:
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      title: "Neural CRM",
+      description:
+        "A smart customer manager powered by AI that automatically sorts, scores, and prioritises your leads.",
+      tag: "AI Tool",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
     },
   ];
 
@@ -55,37 +82,35 @@ const InsightsSection = () => {
       <div className="max-w-350 mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-20">
           <h2 className="text-4xl sm:text-5xl font-serif text-gray-900 mb-6">
-            Insights That Drive Growth
+            Our Recent Work
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
-            Stay ahead with expert resources, practical strategies, and industry
-            insights designed to help your business make smarter decisions.
+            Real systems we've built for real businesses. Each one solved a
+            specific problem with custom code, automation, or AI.
           </p>
         </div>
       </div>
 
       {/* Cards Grid */}
       <div className="relative w-full max-w-275 mx-auto mb-20 z-10 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {insights.slice(0, 2).map((insight, idx) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, idx) => (
             <motion.div
               key={idx}
               initial={{
                 opacity: 0,
-                y: 100,
-                scale: 0.9,
-                rotate: idx === 0 ? -5 : 5,
+                y: 60,
+                scale: 0.95,
               }}
               whileInView={{
                 opacity: 1,
                 y: 0,
                 scale: 1,
-                rotate: 0,
               }}
-              viewport={{ once: false, margin: "-10%" }}
+              viewport={{ once: true, margin: "-10%" }}
               transition={{
-                duration: 0.8,
-                delay: idx * 0.1,
+                duration: 0.6,
+                delay: idx * 0.05,
                 type: "spring",
                 stiffness: 45,
                 damping: 15,
@@ -95,7 +120,9 @@ const InsightsSection = () => {
               <div className="bg-[#f2f1eb] rounded-[20px] p-6 h-full flex flex-col border border-gray-200/50 shadow-[inset_0_2px_10px_rgba(0,0,0,0.02)]">
                 {/* Top Bar */}
                 <div className="flex justify-between items-center mb-6">
-                  <div className="w-16 h-1 bg-gray-300 rounded-full"></div>
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#0f291e]/60">
+                    {project.tag}
+                  </span>
                   <div className="flex gap-1.5">
                     <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
                     <div className="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
@@ -104,22 +131,22 @@ const InsightsSection = () => {
 
                 {/* Image */}
                 <img
-                  src={insight.image}
-                  alt={insight.title}
-                  className="w-full h-60 object-cover rounded-xl mb-8 shadow-sm"
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover rounded-xl mb-6 shadow-sm"
                 />
 
                 {/* Content */}
-                <h3 className="text-2xl font-serif text-gray-900 mb-4">
-                  {insight.title}
+                <h3 className="text-xl font-serif text-gray-900 mb-3">
+                  {project.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed mb-8 grow">
-                  {insight.description}
+                <p className="text-gray-600 leading-relaxed mb-6 grow text-sm">
+                  {project.description}
                 </p>
 
                 {/* Button */}
-                <button className="w-full py-4 rounded-xl bg-[#f8f9f5] text-gray-800 font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors border border-gray-200/50 shadow-sm">
-                  Learn More About This
+                <button className="w-full py-3 rounded-xl bg-[#f8f9f5] text-gray-800 font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors border border-gray-200/50 shadow-sm text-sm">
+                  View Project
                   <ArrowUpRight className="w-4 h-4 text-gray-500" />
                 </button>
               </div>
@@ -135,25 +162,25 @@ const InsightsSection = () => {
 
           <div className="flex items-center gap-2 bg-white px-3 sm:px-4 py-2">
             <CheckCircle2 className="w-5 h-5 text-gray-400 shrink-0" />
-            <span className="whitespace-nowrap">Worked With 100+ Clients</span>
+            <span className="whitespace-nowrap">40+ Projects Built</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-gray-300"></div>
 
           <div className="flex items-center gap-2 bg-white px-3 sm:px-4 py-2">
             <CheckCircle2 className="w-5 h-5 text-gray-400 shrink-0" />
-            <span className="whitespace-nowrap">Industry Expert</span>
+            <span className="whitespace-nowrap">Automation Experts</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-gray-300"></div>
 
           <div className="flex items-center gap-2 bg-white px-3 sm:px-4 py-2">
             <CheckCircle2 className="w-5 h-5 text-gray-400 shrink-0" />
-            <span className="whitespace-nowrap">Engineering Experts</span>
+            <span className="whitespace-nowrap">AI-Powered Builds</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-gray-300"></div>
 
           <div className="flex items-center gap-2 bg-white px-3 sm:px-4 py-2">
             <CheckCircle2 className="w-5 h-5 text-gray-400 shrink-0" />
-            <span className="whitespace-nowrap">Software Design</span>
+            <span className="whitespace-nowrap">Custom Software</span>
           </div>
         </div>
 
@@ -164,7 +191,7 @@ const InsightsSection = () => {
             <ArrowUpRight className="w-4 h-4" />
           </button>
           <button className="flex items-center gap-2 bg-brand-light text-[#0f291e] px-8 py-5 rounded-2xl border border-gray-200 font-bold text-sm hover:bg-[#e2ead9] transition-all">
-            See All Posts
+            See All Projects
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>

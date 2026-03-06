@@ -15,27 +15,27 @@ const TestimonialsSection = () => {
       name: "Wan Mitchell",
       role: "CEO of Virtual Realty",
       quote:
-        "From the first consultation, they impressed me with professionalism and insight. They transformed our business plan into a focused, inspiring roadmap that I actually look forward to following.",
+        "They took our messy business plan and turned it into an automated roadmap. I finally feel in control of where the company is going.",
       location: "San Francisco, CA",
       service: "Growth Consultation",
       image: "https://i.pravatar.cc/150?img=11",
     },
     {
       name: "Olia Thompson",
-      role: "Nurse, NY",
+      role: "Business Owner",
       quote:
-        "They completely reshaped how I approached my career—it's now clear, motivating, and full of direction. They blended strategy with personal guidance so well. My peers can't stop noticing the change.",
+        "The AI chatbot they built handles my customers perfectly. It's like having a 24/7 assistant who never sleeps and never makes mistakes.",
       location: "Austin, TX",
-      service: "Coaching Consultation",
+      service: "AI Chatbot Build",
       image: "https://i.pravatar.cc/150?img=5",
     },
     {
       name: "John Hanbert",
-      role: "Software Developer",
+      role: "Founder",
       quote:
-        "They made my complex career decisions feel simple and structured. The team took time to understand my challenges, and turned uncertainty into a clear, confident path forward that feels uniquely mine.",
+        "I needed a custom CRM that wasn't confusing. They built exactly what I asked for, and it's fast. My team was up and running in days.",
       location: "Brooklyn, NY",
-      service: "Strategy Consultation",
+      service: "Custom CRM",
       image: "https://i.pravatar.cc/150?img=8",
     },
   ];
@@ -48,12 +48,11 @@ const TestimonialsSection = () => {
       <div className="max-w-350 mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-20">
           <h2 className="text-4xl sm:text-5xl font-serif text-gray-900 mb-6">
-            What Our Loving Clients Say
+            What Our Clients Say
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
-            We've helped businesses of all sizes unlock growth, refine their
-            strategies, and achieve lasting results. Here's what our clients
-            say.
+            Real results from real businesses. Here's what the people we've
+            built for have to say about working with Zyltion.
           </p>
         </div>
       </div>

@@ -1,30 +1,31 @@
 import React from "react";
 import { motion } from "motion/react";
 import {
-  Target,
-  Hammer,
+  Zap,
+  Briefcase,
   Lightbulb,
+  MessageSquare,
+  Globe,
+  Database,
+  Target,
   PenTool,
   Cloud,
-  Users,
-  Briefcase,
-  ShieldCheck,
-  Leaf,
+  TrendingUp,
 } from "lucide-react";
 
 const TagsSection = () => {
   const tags = [
-    { text: "Product Development", icon: Lightbulb },
-    { text: "Project Planning", icon: PenTool },
-    { text: "Digital Transformation", icon: Cloud },
-    { text: "Organizational Design", icon: Users },
-    { text: "Talent Management", icon: Users },
-    { text: "Project Planning", icon: PenTool },
-    { text: "Management", icon: Briefcase },
-    { text: "Strategy", icon: Target },
-    { text: "Project Optimization", icon: Hammer },
-    { text: "Risk & Compliance", icon: ShieldCheck },
-    { text: "Sustainability", icon: Leaf },
+    { text: "Automation", icon: Zap },
+    { text: "Custom CRM", icon: Briefcase },
+    { text: "AI Integration", icon: Lightbulb },
+    { text: "Smart Chatbots", icon: MessageSquare },
+    { text: "Web Apps", icon: Globe },
+    { text: "Database Syncing", icon: Database },
+    { text: "Lead Interception", icon: Target },
+    { text: "Business Logic", icon: PenTool },
+    { text: "Cloud Systems", icon: Cloud },
+    { text: "Workflow Design", icon: TrendingUp },
+    { text: "Digital Growth", icon: TrendingUp },
   ];
 
   return (

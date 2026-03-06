@@ -8,24 +8,24 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      q: "What services do you offer?",
-      a: "We provide end-to-end business consulting, including strategy development, market positioning, process optimization, and performance improvement.",
+      q: "I'm not a 'tech person' — will I be able to use this?",
+      a: "Yes. We build complex tech but make it simple to use. You get a clean dashboard and zero-jargon instructions so your team can hit the ground running.",
     },
     {
-      q: "How long does a typical consultation process take?",
-      a: "The duration varies depending on the complexity of your needs. A standard strategic review takes 2-4 weeks, while comprehensive transformations may take several months.",
+      q: "Can your automation really work faster than my team?",
+      a: "Yes. Our bots do in milliseconds what takes humans hours. They work 24/7 with zero mistakes and zero downtime — so you never lose a lead or miss a deadline.",
     },
     {
-      q: "Do you work with startups or established businesses?",
-      a: "We work with both. We help startups build scalable foundations and assist established businesses in optimizing operations and navigating digital transformations.",
+      q: "How does AI actually help my business?",
+      a: "AI handles the 'thinking' tasks like sorting leads, answering customers, and flagging issues. It saves you time by making smart decisions automatically without you lifting a finger.",
     },
     {
-      q: "What can I expect in the first consultation?",
-      a: "Our first meeting is a discovery session. We'll discuss your current challenges, business goals, and determine if our expertise aligns with your needs.",
+      q: "Will this work with the apps I already use?",
+      a: "Yes. We build bridges so your current tools and our tech talk perfectly. Your data will sync automatically across all your platforms — no duplicate work.",
     },
     {
-      q: "Do you offer ongoing support after the consultation?",
-      a: "Absolutely. We provide continuous advisory sessions and performance reviews to ensure strategies are successfully implemented and delivering results.",
+      q: "What happens if I need help later?",
+      a: "We stay by your side to keep your systems fast and updated. If your business grows or needs changes, we handle it — you're never left on your own.",
     },
   ];
 
@@ -37,9 +37,8 @@ const FAQSection = () => {
             Your Questions, Answered Clearly
           </h2>
           <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-            Whether you're seeking strategic direction or improving business
-            performance, here are answers to the most common questions clients
-            ask.
+            Plain answers about how we work, what we build, and why businesses
+            choose Zyltion over doing it themselves.
           </p>
         </div>
 
@@ -70,20 +69,16 @@ const FAQSection = () => {
               </span>
               <div className="text-2xl sm:text-3xl font-serif text-white leading-tight mb-6 max-w-sm flex flex-wrap justify-center gap-1">
                 {[
-                  "Our",
-                  "main",
-                  "goal",
-                  "is",
-                  "to",
-                  "turn",
-                  "complex",
-                  "challenges",
-                  "into",
-                  "clear",
-                  "strategies",
+                  "We",
+                  "build",
+                  "the",
+                  "tech",
                   "that",
-                  "drive",
-                  "growth.",
+                  "makes",
+                  "your",
+                  "business",
+                  "run",
+                  "itself.",
                 ].map((word, idx) => (
                   <motion.span
                     key={idx}

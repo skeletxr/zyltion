@@ -150,7 +150,7 @@ const Hero = () => {
                   className="w-6 h-6 text-gray-700"
                 />
                 <span className="text-[12px] font-bold uppercase tracking-wider text-black font-sans leading-none">
-                  Effortless Engingeering
+                  High-Performance Software
                 </span>
               </motion.div>
 
@@ -159,9 +159,9 @@ const Hero = () => {
                 variants={itemVariants}
                 className="text-[38px] sm:text-[48px] lg:text-[56px] xl:text-[68px] font-light leading-tight lg:leading-[1.1] tracking-[-0.5px] sm:tracking-[-1.5px] lg:tracking-[-2px] font-serif text-black block"
               >
-                Business growth with
+                Custom automation and 
                 <br />
-                expert automation & development
+                software built to scale.
               </motion.h1>
 
               {/* Description */}
@@ -169,8 +169,9 @@ const Hero = () => {
                 variants={itemVariants}
                 className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-md font-medium"
               >
-                Achieve sustainable growth through custom software, workflow
-                automation, and tailored tech solutions.
+                Stop wasting time on manual work. We build custom software,
+                high-speed automation, and AI tools that help your business
+                grow faster without the headaches.
               </motion.p>
 
               {/* Buttons */}
@@ -203,7 +204,7 @@ const Hero = () => {
                 </div>
                 <div className="w-px h-5 bg-black/15"></div>
                 <span className="text-gray-900 font-semibold text-sm">
-                  Rated by loving Clients
+                  Rated 5 stars by our partners
                 </span>
               </motion.div>
             </motion.div>

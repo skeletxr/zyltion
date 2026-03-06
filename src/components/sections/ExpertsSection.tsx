@@ -4,14 +4,14 @@ import { ArrowUpRight, CheckCircle2, Linkedin } from "lucide-react";
 const ExpertsSection = () => {
   const experts = [
     {
-      name: "Gwen Chase",
-      role: "Lead Engineer",
+      name: "Saket",
+      role: "Software Engineer",
       image:
         "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
     },
     {
-      name: "Olivia Aster",
-      role: "Software Architect",
+      name: "Jitendra",
+      role: "Software Engineer",
       image:
         "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
     },
@@ -39,12 +39,11 @@ const ExpertsSection = () => {
       <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-20">
           <h2 className="text-4xl sm:text-5xl font-serif text-gray-900 mb-6">
-            Experts Behind the Strategy
+            Meet the Creators
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
-            At the heart of our work is a team of experienced engineers,
-            architects, and developers who bring clarity, insight, and direction
-            to every project.
+            Two engineers who decided to stop working for other people's dreams
+            and start building tools that actually solve real business problems.
           </p>
         </div>
 

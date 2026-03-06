@@ -5,9 +5,9 @@ import { Target, Banknote, Hammer, LineChart, ArrowRight } from "lucide-react";
 const ServicesSection = () => {
   const services = [
     {
-      title: "Business Strategy",
+      title: "Automation",
       description:
-        "Crafting clear, actionable strategies that align with your vision, ensuring sustainable growth and a competitive edge.",
+        "We build bots that handle your repetitive tasks in seconds — from picking up sales leads to filing paperwork — so you can focus on growth.",
       icon: Target,
       images: [
         "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=400&q=80",
@@ -15,9 +15,9 @@ const ServicesSection = () => {
       ],
     },
     {
-      title: "Financial Advisory",
+      title: "Custom Systems (CRM/ERP)",
       description:
-        "Providing expert financial planning, forecasting, and cost optimization to strengthen profitability and long-term stability.",
+        "We build private dashboards to manage your customers and operations. Everything you need to run your business in one clean, fast place.",
       icon: Banknote,
       images: [
         "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=400&q=80",
@@ -25,9 +25,9 @@ const ServicesSection = () => {
       ],
     },
     {
-      title: "Operations & Process Optimization",
+      title: "AI & Chatbots",
       description:
-        "Our Operations and Process Optimization service is designed to help businesses eliminate inefficiencies and reduce costs.",
+        "We plug AI into your business to answer customers and handle data automatically — so your business stays awake and productive even when you aren't.",
       icon: Hammer,
       images: [
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80",
@@ -35,9 +35,9 @@ const ServicesSection = () => {
       ],
     },
     {
-      title: "Market Research & Analysis",
+      title: "Web Development",
       description:
-        "Our Market Research & Analysis service empowers businesses with the intelligence they need to navigate markets confidently.",
+        "We build fast, modern websites and apps that look great and are easy for your customers to use — turning visitors into paying clients.",
       icon: LineChart,
       images: [
         "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80",
@@ -102,11 +102,11 @@ const ServicesSection = () => {
           </motion.div>
 
           <h2 className="text-4xl sm:text-5xl font-serif text-gray-900 mb-3 font-light">
-            What We Even Do
+            What We Do (Better Than Anyone Else)
           </h2>
           <p className="text-gray-600 text-base leading-relaxed max-w-2xl mx-auto">
-            Explore our comprehensive range of consulting services designed to
-            transform your business and unlock sustainable growth.
+            We build custom tools that solve your specific problems — no generic
+            software, no bloat.
           </p>
         </motion.div>
 
