@@ -8,10 +8,10 @@ const ContactPage = () => {
   return (
     <>
       <main className="pt-2 sm:pt-3 h-[calc(100vh - 88px)] bg-[#fafafa] flex flex-col">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 pb-16 flex-1 flex flex-col overflow-y-auto w-full">
+        <div className="max-w-400 mx-auto px-4 sm:px-6 lg:px-8 pb-16 flex-1 flex flex-col overflow-y-auto w-full">
           <div className="bg-[#f2f1eb] rounded-[40px] p-5 lg:p-8 relative overflow-hidden h-full flex flex-col">
             {/* Background elements */}
-            <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-white/40 rounded-full blur-3xl opacity-70 -translate-x-1/4 -translate-y-1/4 pointer-events-none"></div>
+            <div className="absolute top-0 left-0 w-200 h-200 bg-white/40 rounded-full blur-3xl opacity-70 -translate-x-1/4 -translate-y-1/4 pointer-events-none"></div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10 h-full">
               {/* Left Column */}
@@ -72,7 +72,7 @@ const ContactPage = () => {
                   >
                     <div className="w-10 h-10 bg-[#e6e5df] rounded-xl flex items-center justify-center mb-2">
                       <svg
-                        className="w-5 h-5 text-[var(--color-brand-dark)]"
+                        className="w-5 h-5 text-brand-dark"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -107,7 +107,7 @@ const ContactPage = () => {
 
                 {/* Availability Card */}
                 <motion.div
-                  className="bg-[#e6e5df] rounded-[24px] p-5 border border-white/50 shadow-sm relative overflow-hidden flex-shrink-0"
+                  className="bg-[#e6e5df] rounded-3xl p-5 border border-white/50 shadow-sm relative overflow-hidden shrink-0"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
@@ -128,7 +128,7 @@ const ContactPage = () => {
                           <div className="w-2 h-2 rounded-full bg-gray-300"></div>
                         </div>
                       </div>
-                      <button className="bg-[var(--color-brand-dark)] text-white px-4 py-2 rounded-xl text-xs font-medium hover:bg-gray-800 transition-colors flex items-center gap-1">
+                      <button className="bg-brand-dark text-white px-4 py-2 rounded-xl text-xs font-medium hover:bg-gray-800 transition-colors flex items-center gap-1">
                         Maps Location
                         <Map className="w-4 h-4" />
                       </button>
@@ -146,12 +146,12 @@ const ContactPage = () => {
 
               {/* Right Column - Form */}
               <motion.div
-                className="bg-[#e6e5df] rounded-[32px] p-6 lg:p-7 border border-white/50 shadow-sm flex flex-col overflow-hidden"
+                className="bg-[#e6e5df] rounded-4xl p-6 lg:p-7 border border-white/50 shadow-sm flex flex-col overflow-hidden"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
               >
-                <form className="space-y-3 flex-grow">
+                <form className="space-y-3 grow">
                   <motion.div
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -163,7 +163,7 @@ const ContactPage = () => {
                     <input
                       type="text"
                       placeholder="Jane Smith"
-                      className="w-full px-4 py-2 rounded-xl bg-white border-none focus:ring-2 focus:ring-[var(--color-brand-dark)] outline-none transition-shadow text-sm"
+                      className="w-full px-4 py-2 rounded-xl bg-white border-none focus:ring-2 focus:ring-brand-dark outline-none transition-shadow text-sm"
                     />
                   </motion.div>
                   <motion.div
@@ -177,7 +177,7 @@ const ContactPage = () => {
                     <input
                       type="email"
                       placeholder="jane@framer.com"
-                      className="w-full px-4 py-2 rounded-xl bg-white border-none focus:ring-2 focus:ring-[var(--color-brand-dark)] outline-none transition-shadow text-sm"
+                      className="w-full px-4 py-2 rounded-xl bg-white border-none focus:ring-2 focus:ring-brand-dark outline-none transition-shadow text-sm"
                     />
                   </motion.div>
                   <motion.div
@@ -191,7 +191,7 @@ const ContactPage = () => {
                     <input
                       type="tel"
                       placeholder="+1234567890"
-                      className="w-full px-4 py-2 rounded-xl bg-white border-none focus:ring-2 focus:ring-[var(--color-brand-dark)] outline-none transition-shadow text-sm"
+                      className="w-full px-4 py-2 rounded-xl bg-white border-none focus:ring-2 focus:ring-brand-dark outline-none transition-shadow text-sm"
                     />
                   </motion.div>
                   <motion.div
@@ -205,7 +205,7 @@ const ContactPage = () => {
                     <input
                       type="text"
                       placeholder="enquiry about..."
-                      className="w-full px-4 py-2 rounded-xl bg-white border-none focus:ring-2 focus:ring-[var(--color-brand-dark)] outline-none transition-shadow text-sm"
+                      className="w-full px-4 py-2 rounded-xl bg-white border-none focus:ring-2 focus:ring-brand-dark outline-none transition-shadow text-sm"
                     />
                   </motion.div>
                   <motion.div
@@ -219,12 +219,12 @@ const ContactPage = () => {
                     <textarea
                       placeholder="Message goes here"
                       rows={3}
-                      className="w-full px-4 py-2 rounded-xl bg-white border-none focus:ring-2 focus:ring-[var(--color-brand-dark)] outline-none transition-shadow resize-none text-sm"
+                      className="w-full px-4 py-2 rounded-xl bg-white border-none focus:ring-2 focus:ring-brand-dark outline-none transition-shadow resize-none text-sm"
                     ></textarea>
                   </motion.div>
                   <motion.button
                     type="button"
-                    className="w-full bg-[var(--color-brand-dark)] text-white py-2.5 rounded-xl font-medium hover:bg-gray-800 transition-colors shadow-md text-sm"
+                    className="w-full bg-brand-dark text-white py-2.5 rounded-xl font-medium hover:bg-gray-800 transition-colors shadow-md text-sm"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1 }}

@@ -102,7 +102,8 @@ const ServicesSection = () => {
           </motion.div>
 
           <h2 className="text-4xl sm:text-5xl font-serif text-gray-900 mb-3 font-light">
-            What We Do (Better Than Anyone Else)
+            What We Do 
+            {/* (Better Than Anyone Else) */}
           </h2>
           <p className="text-gray-600 text-base leading-relaxed max-w-2xl mx-auto">
             We build custom tools that solve your specific problems — no generic

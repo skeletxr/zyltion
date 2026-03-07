@@ -13,6 +13,7 @@ import {
   MousePointer2,
 } from "lucide-react";
 import { useCounter } from "../../hooks/useCounter";
+import { RevealText } from "../animations/RevealText";
 
 const Hero = () => {
   const clientsCount = useCounter({ to: 30, duration: 2, delay: 0.5 });
@@ -155,24 +156,20 @@ const Hero = () => {
               </motion.div>
 
               {/* Heading */}
-              <motion.h1
-                variants={itemVariants}
+              <RevealText
+                text="Custom automation and software built to scale."
                 className="text-[38px] sm:text-[48px] lg:text-[56px] xl:text-[68px] font-light leading-tight lg:leading-[1.1] tracking-[-0.5px] sm:tracking-[-1.5px] lg:tracking-[-2px] font-serif text-black block"
-              >
-                Custom automation and 
-                <br />
-                software built to scale.
-              </motion.h1>
+                delay={0.15}
+                staggerDelay={0.06}
+              />
 
               {/* Description */}
-              <motion.p
-                variants={itemVariants}
+              <RevealText
+                text="Stop wasting time on manual work. We build custom software, high-speed automation, and AI tools that help your business grow faster without the headaches."
                 className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-md font-medium"
-              >
-                Stop wasting time on manual work. We build custom software,
-                high-speed automation, and AI tools that help your business
-                grow faster without the headaches.
-              </motion.p>
+                delay={0.35}
+                staggerDelay={0.04}
+              />
 
               {/* Buttons */}
               <motion.div
