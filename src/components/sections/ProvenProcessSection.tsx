@@ -36,7 +36,7 @@ const ProvenProcessSection = () => {
 
   const y = useTransform(
     smoothY,
-    [sectionTop - 10, sectionTop + maxY - 10],
+    [sectionTop - 20, sectionTop + maxY - 20],
     [0, maxY],
     {
       clamp: true,

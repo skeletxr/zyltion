@@ -5,26 +5,25 @@ import { ArrowUpRight, ArrowRight, CheckCircle2 } from "lucide-react";
 const InsightsSection = () => {
   const projects = [
     {
-      title: "Lead Picker",
+      title: "Fokal Lamps",
       description:
-        "Grabs new sales leads in milliseconds and routes them directly into your CRM — zero manual work required.",
-      tag: "Automation",
-      image:
-        "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+        "We engineered a custom website with automated inquiry responses and a full-scale catalog management system for seamless operations.",
+      tag: "Web App",
+      image: "/fokal.png",
     },
     {
-      title: "TapShopper",
+      title: "TapShoper",
       description:
-        "A massive, automated online store system that handles inventory, orders, and fulfilment at scale.",
-      tag: "Custom System",
+        "A massive, automated online store system that handles inventory, orders, and fulfilment at scale. Handles thousands of products and customers.",
+      tag: "Web App",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+        "/tapshoper.png",
     },
     {
-      title: "Auto-Filer",
+      title: "Createathon",
       description:
-        "Moves data to state portals automatically — what used to take hours of manual filing now takes seconds.",
-      tag: "Automation",
+        "A high-conversion landing page built to onboard thousands of creators with a backend system that handles new creator applications and inquiries",
+      tag: "Web App",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
     },
@@ -130,11 +129,13 @@ const InsightsSection = () => {
                 </div>
 
                 {/* Image */}
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover rounded-xl mb-6 shadow-sm"
-                />
+                <div className="w-full aspect-video bg-gray-100 rounded-xl mb-6 shadow-sm overflow-hidden flex items-center justify-center">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
 
                 {/* Content */}
                 <h3 className="text-xl font-serif text-gray-900 mb-3">
