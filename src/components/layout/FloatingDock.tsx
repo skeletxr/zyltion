@@ -7,7 +7,7 @@ const navItems = [
   "Home",
   "Services",
   "Testimonials",
-  "Blog",
+  "Work",
   "Contact",
 ] as const;
 

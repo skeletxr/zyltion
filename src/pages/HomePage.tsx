@@ -7,9 +7,9 @@ import WhyUsSection from "../components/sections/WhyUsSection";
 import ProvenProcessSection from "../components/sections/ProvenProcessSection";
 import ComparisonSection from "../components/sections/ComparisonSection";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
-import InsightsSection from "../components/sections/InsightsSection";
 import FAQSection from "../components/sections/FAQSection";
 // import ExpertsSection from '../components/sections/ExpertsSection';
+import OurWorkSection from "../components/sections/OurWorkSection";
 import FooterSection from "../components/layout/FooterSection";
 
 const HomePage = () => {
@@ -24,7 +24,7 @@ const HomePage = () => {
         <ProvenProcessSection />
         <ComparisonSection />
         <TestimonialsSection />
-        <InsightsSection />
+        <OurWorkSection />
         <FAQSection />
         {/* <ExpertsSection /> */}
       </main>
