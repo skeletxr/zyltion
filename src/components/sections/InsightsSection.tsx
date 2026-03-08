@@ -199,10 +199,7 @@ const InsightsSection = () => {
               Contact Us
               <ArrowUpRight className="w-4 h-4" />
             </button>
-            <button className="flex items-center gap-2 bg-brand-light text-[#0f291e] px-8 py-5 rounded-2xl border border-gray-200 font-bold text-sm hover:bg-[#e2ead9] transition-all">
-              See All Projects
-              <ArrowRight className="w-4 h-4" />
-            </button>
+           
           </div>
         </div>
       </section>
