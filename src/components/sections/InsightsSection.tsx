@@ -58,7 +58,10 @@ const InsightsSection = () => {
 
   return (
     <>
-      <section id="blog" className="w-full bg-white py-24 sm:py-32 relative">
+      <section
+        id="projects"
+        className="w-full bg-white py-24 sm:py-32 relative"
+      >
         {/* Background decorative elements */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-250 h-250 bg-linear-to-b from-[#f4f7f0] to-transparent rounded-full blur-3xl opacity-50 pointer-events-none"></div>
 

@@ -6,7 +6,7 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 const navItems = [
   { label: "Home", target: "home" },
   { label: "Services", target: "services" },
-  { label: "Projects", target: "blog" },
+  { label: "Projects", target: "projects" },
   { label: "FAQs", target: "faqs" },
   { label: "Contact", target: "contact" },
 ] as const;
@@ -16,20 +16,23 @@ const FloatingDock = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Handle scrolling to sections when hash changes
+  // Handle scrolling to sections when navigating from other pages
   useEffect(() => {
-    if (location.pathname === "/" && location.hash) {
-      const target = location.hash.slice(1);
-      const element = document.getElementById(target);
-      if (element) {
+    if (location.pathname === "/") {
+      const scrollTarget = sessionStorage.getItem("scrollTo");
+      if (scrollTarget) {
         setTimeout(() => {
-          const rect = element.getBoundingClientRect();
-          const scrollPosition = window.scrollY + rect.top;
-          window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+          const element = document.getElementById(scrollTarget);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            const scrollPosition = window.scrollY + rect.top;
+            window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+          }
+          sessionStorage.removeItem("scrollTo");
         }, 100);
       }
     }
-  }, [location.hash, location.pathname]);
+  }, [location.pathname]);
 
   const handleNavigation = (target: string) => {
     if (target === "home") {
@@ -37,8 +40,9 @@ const FloatingDock = () => {
     } else if (target === "contact") {
       navigate("/contact");
     } else {
-      // If we're on home page, scroll to section
+      // Check if we're on home page
       if (location.pathname === "/") {
+        // Just scroll, no URL change
         const element = document.getElementById(target);
         if (element) {
           const rect = element.getBoundingClientRect();
@@ -46,8 +50,9 @@ const FloatingDock = () => {
           window.scrollTo({ top: scrollPosition, behavior: "smooth" });
         }
       } else {
-        // If not on home page, navigate to home and scroll
-        navigate(`/#${target}`);
+        // Not on home page, navigate to home and mark where to scroll
+        sessionStorage.setItem("scrollTo", target);
+        navigate("/");
       }
     }
   };
