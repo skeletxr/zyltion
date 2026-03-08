@@ -57,10 +57,10 @@ const ContactPage = () => {
                       Drop us a message anytime.
                     </p>
                     <a
-                      href="mailto:zyltion@gmail.com"
+                      href="mailto:contact.zyltion@gmail.com"
                       className="text-gray-900 underline underline-offset-4 hover:text-gray-600 transition-colors"
                     >
-                      zyltion@gmail.com
+                      contact.zyltion@gmail.com
                     </a>
                   </motion.div>
 
@@ -240,7 +240,7 @@ const ContactPage = () => {
                   <div className="flex items-center gap-3">
                     <div>
                       <p className="text-sm font-medium text-gray-900">
-                        zyltion@gmail.com
+                        contact.zyltion@gmail.com
                       </p>
                       <p className="text-xs text-gray-500">
                         get a reply within 24 hrs

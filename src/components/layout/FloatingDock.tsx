@@ -1,25 +1,56 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
 const navItems = [
-  "Home",
-  "Services",
-  "Testimonials",
-  "Blog",
-  "Contact",
+  { label: "Home", target: "home" },
+  { label: "Services", target: "services" },
+  { label: "Projects", target: "blog" },
+  { label: "FAQs", target: "faqs" },
+  { label: "Contact", target: "contact" },
 ] as const;
-
-const getPath = (item: string) => {
-  if (item === "Home") return "/";
-  if (item === "Contact") return "/contact";
-  return `/#${item.toLowerCase()}`;
-};
 
 const FloatingDock = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  // Handle scrolling to sections when hash changes
+  useEffect(() => {
+    if (location.pathname === "/" && location.hash) {
+      const target = location.hash.slice(1);
+      const element = document.getElementById(target);
+      if (element) {
+        setTimeout(() => {
+          const rect = element.getBoundingClientRect();
+          const scrollPosition = window.scrollY + rect.top;
+          window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location.hash, location.pathname]);
+
+  const handleNavigation = (target: string) => {
+    if (target === "home") {
+      navigate("/");
+    } else if (target === "contact") {
+      navigate("/contact");
+    } else {
+      // If we're on home page, scroll to section
+      if (location.pathname === "/") {
+        const element = document.getElementById(target);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const scrollPosition = window.scrollY + rect.top;
+          window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+        }
+      } else {
+        // If not on home page, navigate to home and scroll
+        navigate(`/#${target}`);
+      }
+    }
+  };
 
   return (
     <>
@@ -54,32 +85,36 @@ const FloatingDock = () => {
             <nav className="flex flex-col px-4 py-3 gap-1">
               {navItems.map((item) => {
                 const isActive =
-                  item === "Home"
+                  item.target === "home"
                     ? location.pathname === "/"
-                    : location.pathname === getPath(item) ||
-                      location.hash === `#${item.toLowerCase()}`;
+                    : location.hash === `#${item.target}`;
                 return (
-                  <Link
-                    key={item}
-                    to={getPath(item)}
-                    onClick={() => setMobileOpen(false)}
-                    className={`flex items-center justify-between px-4 py-3.5 rounded-2xl text-base font-medium transition-colors ${
+                  <button
+                    key={item.target}
+                    onClick={() => {
+                      handleNavigation(item.target);
+                      setMobileOpen(false);
+                    }}
+                    className={`flex items-center justify-between px-4 py-3.5 rounded-2xl text-base font-medium transition-colors text-left w-full ${
                       isActive
                         ? "bg-[#0e3a27] text-white"
                         : "text-gray-700 hover:bg-gray-100"
                     }`}
                   >
-                    <span>{item}</span>
+                    <span>{item.label}</span>
                     <ArrowUpRight
                       className={`w-4 h-4 ${isActive ? "text-white/70" : "text-gray-400"}`}
                     />
-                  </Link>
+                  </button>
                 );
               })}
             </nav>
             <div className="px-4 pb-4">
               <button
-                onClick={() => setMobileOpen(false)}
+                onClick={() => {
+                  navigate("/contact");
+                  setMobileOpen(false);
+                }}
                 className="w-full py-4 rounded-2xl bg-[#0e3a27] text-white font-bold text-sm shadow-md"
               >
                 Get Started
@@ -100,13 +135,13 @@ const FloatingDock = () => {
           {/* Desktop nav links */}
           <nav className="hidden sm:flex items-center px-6 gap-8">
             {navItems.map((item) => (
-              <Link
-                key={item}
-                to={getPath(item)}
-                className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+              <button
+                key={item.target}
+                onClick={() => handleNavigation(item.target)}
+                className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors cursor-pointer bg-none border-none padding-none"
               >
-                {item}
-              </Link>
+                {item.label}
+              </button>
             ))}
           </nav>
 
@@ -131,7 +166,10 @@ const FloatingDock = () => {
             <span>Menu</span>
           </button>
 
-          <button className="bg-brand-dark text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors shadow-md whitespace-nowrap">
+          <button
+            onClick={() => navigate("/contact")}
+            className="bg-brand-dark text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors shadow-md whitespace-nowrap"
+          >
             Get Started
           </button>
         </div>
