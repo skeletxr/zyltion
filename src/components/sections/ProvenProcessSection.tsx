@@ -1,8 +1,10 @@
 import React, { useRef, useLayoutEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
 import { ArrowUpRight, Star } from "lucide-react";
 
 const ProvenProcessSection = () => {
+  const navigate = useNavigate();
   const containerRef = useRef<HTMLDivElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
   const [sectionTop, setSectionTop] = useState(0);
@@ -83,11 +85,17 @@ const ProvenProcessSection = () => {
               </p>
 
               <div className="flex flex-wrap items-center gap-4 mb-12">
-                <button className="relative flex items-center justify-center gap-2 px-8 py-5 rounded-2xl bg-[#0e3a27] text-white font-bold text-sm transition-all cursor-pointer overflow-hidden shadow-[0_0.6px_1.1px_-1.25px_rgba(61,61,61,0.72),0_2.3px_4.1px_-2.5px_rgba(61,61,61,0.64),0_10px_18px_-3.75px_rgba(61,61,61,0.25),0_0.7px_0.7px_-0.58px_rgba(22,51,32,0.35),0_1.8px_1.8px_-1.17px_rgba(22,51,32,0.34),0_3.6px_3.6px_-1.75px_rgba(22,51,32,0.33),0_6.9px_6.9px_-2.33px_rgba(22,51,32,0.3),0_13.6px_13.7px_-2.92px_rgba(22,51,32,0.26),0_30px_30px_-3.5px_rgba(22,51,32,0.15)] group">
+                <button
+                  onClick={() => navigate("/contact")}
+                  className="relative flex items-center justify-center gap-2 px-8 py-5 rounded-2xl bg-[#0e3a27] text-white font-bold text-sm transition-all cursor-pointer overflow-hidden shadow-[0_0.6px_1.1px_-1.25px_rgba(61,61,61,0.72),0_2.3px_4.1px_-2.5px_rgba(61,61,61,0.64),0_10px_18px_-3.75px_rgba(61,61,61,0.25),0_0.7px_0.7px_-0.58px_rgba(22,51,32,0.35),0_1.8px_1.8px_-1.17px_rgba(22,51,32,0.34),0_3.6px_3.6px_-1.75px_rgba(22,51,32,0.33),0_6.9px_6.9px_-2.33px_rgba(22,51,32,0.3),0_13.6px_13.7px_-2.92px_rgba(22,51,32,0.26),0_30px_30px_-3.5px_rgba(22,51,32,0.15)] group"
+                >
                   Get Started
                   <ArrowUpRight className="w-4 h-4" />
                 </button>
-                <button className="flex items-center gap-2 bg-brand-light text-[#0f291e] px-8 py-5 rounded-2xl font-bold text-sm hover:bg-[#e2ead9] transition-all border border-gray-200/50 shadow-sm">
+                <button
+                  onClick={() => navigate("/contact")}
+                  className="flex items-center gap-2 bg-brand-light text-[#0f291e] px-8 py-5 rounded-2xl font-bold text-sm hover:bg-[#e2ead9] transition-all border border-gray-200/50 shadow-sm"
+                >
                   Our Services
                 </button>
               </div>

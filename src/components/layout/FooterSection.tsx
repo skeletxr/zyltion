@@ -16,10 +16,10 @@ const FooterSection = () => {
       <div className="w-full max-w-350 mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex items-center gap-6">
           <a
-            href="mailto:zyltion@gmail.com"
+            href="mailto:contact.contact.zyltion@gmail.com"
             className="text-gray-900 font-medium underline underline-offset-4 hover:text-gray-600 transition-colors"
           >
-            zyltion@gmail.com
+            contact.contact.zyltion@gmail.com
           </a>
           <div className="grow h-px bg-gray-300"></div>
         </div>
