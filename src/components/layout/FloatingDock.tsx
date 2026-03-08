@@ -4,11 +4,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
 const navItems = [
-  "Home",
-  "Services",
-  "Testimonials",
-  "Blog",
-  "Contact",
+  { label: "Home", target: "home" },
+  { label: "Services", target: "services" },
+  { label: "Testimonials", target: "testimonials" },
+  { label: "Blog", target: "blog" },
+  { label: "Contact", target: "contact" },
 ] as const;
 
 const FloatingDock = () => {
