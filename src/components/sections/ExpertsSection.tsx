@@ -15,6 +15,12 @@ const ExpertsSection = () => {
       image:
         "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
     },
+    {
+      name: "Atharva",
+      role: "Software Engineer",
+      image:
+        "https://media.tenor.com/OeGnPBoP_gUAAAAe/monkey-thinking.png",
+    },
   ];
 
   return (
@@ -36,19 +42,19 @@ const ExpertsSection = () => {
         />
       </svg>
 
-      <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-20">
           <h2 className="text-4xl sm:text-5xl font-serif text-gray-900 mb-6">
             Meet the Creators
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
-            Two engineers who decided to stop working for other people's dreams
+            Three engineers who decided to stop working for other people's dreams
             and start building tools that actually solve real business problems.
           </p>
         </div>
 
-        {/* Cards Grid - 2 cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-[800px] mx-auto mb-14 sm:mb-20">
+        {/* Cards Grid - 3 cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto mb-14 sm:mb-20">
           {experts.map((expert, idx) => (
             <div
               key={idx}
