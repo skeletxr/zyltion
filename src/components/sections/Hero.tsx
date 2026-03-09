@@ -146,7 +146,7 @@ const Hero = () => {
             <img
               src="/zyltion-hero-right.png"
               alt="Zyltion Hero"
-              className="w-full h-auto max-w-sm lg:max-w-md object-contain"
+              className="w-full h-auto max-w-lg lg:max-w-lg object-contain"
             />
           </motion.div>
         </div>
