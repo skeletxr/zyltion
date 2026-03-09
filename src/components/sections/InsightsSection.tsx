@@ -58,10 +58,7 @@ const InsightsSection = () => {
 
   return (
     <>
-      <section
-        id="projects"
-        className="w-full bg-white py-24 sm:py-32 relative"
-      >
+      <section id="projects" className="w-full bg-white py-16 relative">
         {/* Background decorative elements */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-250 h-250 bg-linear-to-b from-[#f4f7f0] to-transparent rounded-full blur-3xl opacity-50 pointer-events-none"></div>
 
@@ -150,19 +147,23 @@ const InsightsSection = () => {
                   </p>
 
                   {/* Button */}
-                  <button
-                    onClick={() => {
-                      if (project.url) {
-                        window.open(project.url, "_blank");
-                      } else {
-                        setSelectedProject(idx);
-                      }
-                    }}
-                    className="w-full py-3 rounded-xl bg-[#f8f9f5] text-gray-800 font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors border border-gray-200/50 shadow-sm text-sm cursor-pointer"
-                  >
-                    View Project
-                    <ArrowUpRight className="w-4 h-4 text-gray-500" />
-                  </button>
+                  {project.url ? (
+                    <button
+                      onClick={() => window.open(project.url, "_blank")}
+                      className="w-full py-3 rounded-xl bg-[#f8f9f5] text-gray-800 font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors border border-gray-200/50 shadow-sm text-sm cursor-pointer"
+                    >
+                      View Project
+                      <ArrowUpRight className="w-4 h-4 text-gray-500" />
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => setSelectedProject(idx)}
+                      className="w-full py-3 rounded-xl bg-[#f8f9f5] text-gray-800 font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors border border-gray-200/50 shadow-sm text-sm cursor-pointer"
+                    >
+                      Get Overview
+                      <ArrowRight className="w-4 h-4 text-gray-500" />
+                    </button>
+                  )}
                 </div>
               </motion.div>
             ))}
