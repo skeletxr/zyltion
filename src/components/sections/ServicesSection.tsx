@@ -10,8 +10,8 @@ const ServicesSection = () => {
         "We build bots that handle your repetitive tasks in seconds — from picking up sales leads to filing paperwork — so you can focus on growth.",
       icon: Target,
       images: [
-        "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80",
+        "/automation-1.png",
+        "/automation-2.png",
       ],
     },
     {
@@ -20,8 +20,8 @@ const ServicesSection = () => {
         "We build private dashboards to manage your customers and operations. Everything you need to run your business in one clean, fast place.",
       icon: Banknote,
       images: [
-        "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=400&q=80",
+        "/custom-1.png",
+        "/custom-2.png",
       ],
     },
     {
@@ -30,8 +30,8 @@ const ServicesSection = () => {
         "We plug AI into your business to answer customers and handle data automatically — so your business stays awake and productive even when you aren't.",
       icon: Hammer,
       images: [
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80",
+        "/ai-chatbot-1.png",
+        "/ai-chatbot-2.png",
       ],
     },
     {
@@ -40,8 +40,8 @@ const ServicesSection = () => {
         "We build fast, modern websites and apps that look great and are easy for your customers to use — turning visitors into paying clients.",
       icon: LineChart,
       images: [
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=400&q=80",
+        "/web-1.png",
+        "/web-2.png",
       ],
     },
   ];
@@ -155,26 +155,26 @@ const ServicesSection = () => {
                 </p>
 
                 {/* Images Grid with enhanced styling */}
-                <div className="grid grid-cols-2 gap-2 h-35 sm:h-45 mb-4">
+                <div className="grid grid-cols-2 gap-2 mb-4">
                   <motion.div
-                    className="relative rounded-2xl overflow-hidden group/img shadow-md hover:shadow-lg transition-shadow duration-300"
+                    className="relative rounded-2xl overflow-hidden group/img shadow-md hover:shadow-lg transition-shadow duration-300 aspect-video"
                     whileHover={{ scale: 1.02 }}
                   >
                     <img
                       src={service.images[0]}
                       alt=""
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/10 transition-colors duration-300"></div>
                   </motion.div>
                   <motion.div
-                    className="relative rounded-2xl overflow-hidden group/img shadow-md hover:shadow-lg transition-shadow duration-300"
+                    className="relative rounded-2xl overflow-hidden group/img shadow-md hover:shadow-lg transition-shadow duration-300 aspect-video"
                     whileHover={{ scale: 1.02 }}
                   >
                     <img
                       src={service.images[1]}
                       alt=""
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/10 transition-colors duration-300"></div>
                   </motion.div>

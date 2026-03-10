@@ -128,10 +128,10 @@ const ContactPage = () => {
                           <div className="w-2 h-2 rounded-full bg-gray-300"></div>
                         </div>
                       </div>
-                      <button className="bg-brand-dark text-white px-4 py-2 rounded-xl text-xs font-medium hover:bg-gray-800 transition-colors flex items-center gap-1">
+                      {/* <button className="bg-brand-dark text-white px-4 py-2 rounded-xl text-xs font-medium hover:bg-gray-800 transition-colors flex items-center gap-1">
                         Maps Location
                         <Map className="w-4 h-4" />
-                      </button>
+                      </button> */}
                     </div>
                     <div className="h-48 overflow-hidden">
                       <img
@@ -162,7 +162,7 @@ const ContactPage = () => {
                     </label>
                     <input
                       type="text"
-                      placeholder="Jane Smith"
+                      placeholder="John Doe"
                       className="w-full px-4 py-2 rounded-xl bg-white border-none focus:ring-2 focus:ring-brand-dark outline-none transition-shadow text-sm"
                     />
                   </motion.div>
@@ -176,7 +176,7 @@ const ContactPage = () => {
                     </label>
                     <input
                       type="email"
-                      placeholder="jane@framer.com"
+                      placeholder="john@example.com"
                       className="w-full px-4 py-2 rounded-xl bg-white border-none focus:ring-2 focus:ring-brand-dark outline-none transition-shadow text-sm"
                     />
                   </motion.div>
